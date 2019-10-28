@@ -4,10 +4,10 @@
 include "sqlPack.php";
 //###############################################################################################
 // EMPTY VARIABLES
-	$lastname = "";
+	$name = "";
 	$password = "";	
 
-	$lastname_err = $password_err = "";
+	$name_err = $password_err = "";
 
 //###############################################################################################
 
@@ -18,12 +18,12 @@ include "sqlPack.php";
 //###############################################################################################
 if ($_SERVER['REQUEST_METHOD']=="POST"){
 
-	if (isset($_POST['lastname']) and isset($_POST['password']) ) {
+	if (isset($_POST['name']) and isset($_POST['password']) ) {
 		include('sqlPack.php'); //code is given below (used for database connection)
-		$username=$_POST['lastname'];
+		$username=$_POST['name'];
 		$password=$_POST['password'];
 
-		$sql = "SELECT password, lastname FROM student WHERE lastname = '$lastname';";
+		$sql = "SELECT password, name FROM student WHERE name = '$name';";
 		$result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
 		$row=mysqli_fetch_assoc($result);
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
 
 		if(password_verify($password,$row['password'])){
 			session_start();
-			$_SESSION['lastname'] = $row['lastname'];
+			$_SESSION['name'] = $row['name'];
 			$_SESSION['logged'] = true;
 			header('Location: index.php');
 		}
@@ -55,10 +55,10 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
 			<!-- [1] ROW -->
 			<div class="row">
 				<div class="lastname col-md-6 col-12">
-					<!-- 💬 Username -->
-					<label for="formLastname">Lastname:</label>
-					<input  class="form-control shadow p-1" type="text" size="20" name="lastname" id="formLastname" alt="Your lastname input"  placeholder="Type your Lastname here" value="<?php echo $lastname ?>"  />
-					<span class="error"><?php echo $lastname_err;?></span>
+					<!-- 💬 Name -->
+					<label for="formName">Name:</label>
+					<input  class="form-control shadow p-1" type="text" size="20" name="name" id="formName" alt="Your name input"  placeholder="Type your name here" value="<?php echo $name ?>"  />
+					<span class="error"><?php echo $name_err;?></span>
 				</div>
 
 				<div class="password col-md-6 col-12">
