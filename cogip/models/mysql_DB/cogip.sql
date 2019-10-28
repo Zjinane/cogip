@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database:3306
--- Generation Time: Oct 28, 2019 at 02:39 PM
+-- Generation Time: Oct 28, 2019 at 02:58 PM
 -- Server version: 10.4.2-MariaDB-1:10.4.2+maria~bionic
 -- PHP Version: 7.2.5
 
@@ -68,9 +68,16 @@ CREATE TABLE `invoice` (
 
 CREATE TABLE `login` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf32_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `name`, `password`) VALUES
+(1, 'user', 'user');
 
 -- --------------------------------------------------------
 
@@ -144,7 +151,7 @@ ALTER TABLE `invoice`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `type`
