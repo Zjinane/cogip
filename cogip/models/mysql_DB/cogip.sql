@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: database:3306
--- Generation Time: Oct 28, 2019 at 02:58 PM
--- Server version: 10.4.2-MariaDB-1:10.4.2+maria~bionic
--- PHP Version: 7.2.5
+-- Hôte : 127.0.0.1
+-- Généré le :  mar. 29 oct. 2019 à 16:33
+-- Version du serveur :  10.4.6-MariaDB
+-- Version de PHP :  7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,145 +19,165 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cogip`
+-- Base de données :  `cogip`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Structure de la table `companies`
 --
 
-CREATE TABLE `contact` (
+CREATE TABLE `companies` (
   `id` int(11) NOT NULL,
-  `firstname` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `lastname` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf32_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+  `name` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `vat` int(11) NOT NULL,
+  `country` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `fk_types` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `entreprise`
+-- Structure de la table `contacts`
 --
 
-CREATE TABLE `entreprise` (
+CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `country` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `TVA` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+  `name` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `fk_companies` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice`
+-- Structure de la table `invoices`
 --
 
-CREATE TABLE `invoice` (
+CREATE TABLE `invoices` (
   `id` int(11) NOT NULL,
   `num` int(11) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+  `date` date NOT NULL,
+  `fk_contacts` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Structure de la table `login`
 --
 
 CREATE TABLE `login` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf32_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `name`, `password`) VALUES
-(1, 'user', 'user');
+  `name` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `usertype` varchar(225) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type`
+-- Structure de la table `types`
 --
 
-CREATE TABLE `type` (
-  `id` int(11) NOT NULL,
-  `customer` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
-  `provider` varchar(255) COLLATE utf32_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+CREATE TABLE `types` (
+  `id` int(255) NOT NULL,
+  `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `contact`
+-- Index pour la table `companies`
 --
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_type` (`fk_types`);
 
 --
--- Indexes for table `entreprise`
+-- Index pour la table `contacts`
 --
-ALTER TABLE `entreprise`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_companies` (`fk_companies`);
 
 --
--- Indexes for table `invoice`
+-- Index pour la table `invoices`
 --
-ALTER TABLE `invoice`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `invoices`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_contacts` (`fk_contacts`);
 
 --
--- Indexes for table `login`
+-- Index pour la table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `type`
+-- Index pour la table `types`
 --
-ALTER TABLE `type`
+ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT pour la table `companies`
 --
-ALTER TABLE `contact`
+ALTER TABLE `companies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `entreprise`
+-- AUTO_INCREMENT pour la table `contacts`
 --
-ALTER TABLE `entreprise`
+ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `invoice`
+-- AUTO_INCREMENT pour la table `invoices`
 --
-ALTER TABLE `invoice`
+ALTER TABLE `invoices`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT pour la table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `type`
+-- AUTO_INCREMENT pour la table `types`
 --
-ALTER TABLE `type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `types`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `companies`
+--
+ALTER TABLE `companies`
+  ADD CONSTRAINT `fk_type` FOREIGN KEY (`fk_types`) REFERENCES `types` (`id`);
+
+--
+-- Contraintes pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD CONSTRAINT `fk_companies` FOREIGN KEY (`fk_companies`) REFERENCES `companies` (`id`);
+
+--
+-- Contraintes pour la table `invoices`
+--
+ALTER TABLE `invoices`
+  ADD CONSTRAINT `fk_contacts` FOREIGN KEY (`fk_contacts`) REFERENCES `contacts` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
