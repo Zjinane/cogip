@@ -43,11 +43,11 @@
 			<script src="https://use.fontawesome.com/c5aedf01c1.js"></script>
 
 		<!-- FAVICON -->
-		<link rel="icon" type="image/png" href="assets/img/[...].png"/>
+		<link rel="icon" type="image/png" href="assets/img/logo.png"/>
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Contacts
+				Cogip | Login
 			</title>
 
 	</head>
@@ -60,12 +60,20 @@
 	
 		<!-- HEADER -->
 		<header>	
-			<?php include 'navbar.php' ?>
+			<?php include 'bloc_Navbar.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+			<div class="container-fluid header">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<h3>Login</h3>
+					</div>
+				</div>
+			</div>
 		</header>
 		
 		<!-- MAIN -->
 		<main>
-			 <h1></h1>
+			<?php include 'form_Login.php' ?>
 		</main>
 
 		<!-- ASIDE -->
@@ -81,7 +89,7 @@
 		
 		<!-- FOOTER -->
 		<footer>
-					
+			<?php include 'bloc_Footer.php' ?>		
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->

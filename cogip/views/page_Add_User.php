@@ -43,11 +43,11 @@
 			<script src="https://use.fontawesome.com/c5aedf01c1.js"></script>
 
 		<!-- FAVICON -->
-		<link rel="icon" type="image/png" href="assets/img/[...].png"/>
+		<link rel="icon" type="image/png" href="assets/img/logo.png"/>
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Invoices
+				Cogip | New contact
 			</title>
 
 	</head>
@@ -60,12 +60,69 @@
 	
 		<!-- HEADER -->
 		<header>	
-			<?php include 'navbar.php' ?>
+			<?php include 'bloc_Navbar.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+
+			<div class="container-fluid header">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<h3>Add a new contact</h3>
+					</div>
+				</div>
+			</div>
 		</header>
 		
 		<!-- MAIN -->
 		<main>
-			 <h1></h1>
+
+			<div class="container">
+				<div class="row">
+					<div class="form rounded-lg col-10 offset-1">
+					
+						<form method="post" action="" autocomplete="on" id="form">
+
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="username col-md-6 col-12">
+									<!-- 💬 username -->
+									<label for="formUsername">Username:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="username" id="formUsername" alt="Your username input"  placeholder="Type your username here" value="<?php echo $username ?>"  />
+									<span class="error"><?php echo $username_err;?></span>
+								</div>
+
+								<div class="password col-md-6 col-12">
+                                    <!-- 💬 Password -->
+                                    <label for="formPassword">Password:</label>
+                                    <input  class="form-control shadow p-1" type="password" name="password" id="formPassword" placeholder="Type your password here" value="<?php echo $password ?>"   alt="Your password input"/>
+                                    <span class="error"><?php echo $password_err;?></span>
+                                </div>
+							</div>
+
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="usertype col-md-6 col-12">
+									<!-- 💬 Email -->
+									<label for="formUsertype">User type:</label>
+									<input  class="form-control shadow p-1" type="text" name="usertype" id="formUsertype" alt="Your user type input" placeholder="Type your usertype here" value="<?php echo $usertype ?>"  />
+									<span class="error"><?php echo $usertype_err;?></span>
+								</div>
+							</div>
+									
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
+							</div>
+									
+						</form>
+					</div>
+				</div>
+			</div>
+
 		</main>
 
 		<!-- ASIDE -->
@@ -81,7 +138,7 @@
 		
 		<!-- FOOTER -->
 		<footer>
-					
+			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->

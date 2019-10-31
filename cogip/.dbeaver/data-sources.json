@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-16e16d77f66-7ded5fa997878150": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "MySQL 8+ - cogip",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "cogip",
+				"url": "jdbc:mysql://localhost:3306/cogip",
+				"type": "dev",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
