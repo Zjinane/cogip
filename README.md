@@ -42,8 +42,8 @@
 <h2>⬛️ Assets links list:</h2>
 
 <ul>
-    <li>TITLE-BACKGROUND-IMAGE: https://cdn.pixabay.com/photo/2016/11/01/14/48/purple-1788479_1280.png</li>
-    <li>BACKGROUND_IMAGE: https://images.pexels.com/photos/1137752/pexels-photo-1137752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260</li>
+    <li>JUMBOTRON_BACKGROUND-IMAGE: </li>
+    <li>BODY_BACKGROUND-IMAGE: </li>
 </ul>
 
 <br>
