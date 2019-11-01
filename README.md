@@ -14,7 +14,7 @@
 <hr>
 <br>
 
-<h2>⬛️ Deadline:</h2>
+<h2>⬛️ Deadline ⬛️</h2>
 
 <p> 2 weeks project</p>
 <ul>
@@ -26,7 +26,7 @@
 <hr>
 <br>
 
-<h2>⬛️ The Project goals:</h2>
+<h2>⬛️ The Project goals ⬛️</h2>
 
 <ul>
   <li>The website must provide 2 types of user: admin and simple user.</li><br>
@@ -39,7 +39,7 @@
 <hr>
 <br>
 
-<h2>⬛️ Still working on:</h2>
+<h2>⬛️ Still in work ⬛️</h2>
 
 <ul>
     <li>Make a unique Username function</li><br>
@@ -51,7 +51,7 @@
 <hr>
 <br>
 
-<h2>⬛️ Assets links list:</h2>
+<h2>⬛️ Assets links list ⬛️</h2>
 
 <ul>
     <li>JUMBOTRON_BACKGROUND-IMAGE: </li>
