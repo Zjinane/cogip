@@ -1,7 +1,7 @@
 # 💼 Cogip
 
 <p align="center">
-<img src="https://i1.sndcdn.com/artworks-000000737630-in8gri-t500x500.jpg" height="10%" width="5%">
+<img src="https://i1.sndcdn.com/artworks-000000737630-in8gri-t500x500.jpg" height="30%" width="15%">
 </p>
 
 <br>
@@ -17,10 +17,10 @@
 <h2>⬛️ The Project goals:</h2>
 
 <ul>
-  <li>The website must provide 2 types of user: admin, and simple user.</li><br>
+  <li>The website must provide 2 types of user: admin and simple user.</li><br>
   <li>It needs "welcome", "invoices", "contacts" and "companies" pages.</li><br>
   <li>3 main options must be avaible: View, Update and Delete existing data</li><br>
-  <li>It must contain forms for each section, for inputing new data in the database passing by the website.</li><br>
+  <li>It must contain forms for each section. They will be used to insert new data in the database passing by the website.</li><br>
 </ul>
 
 <br>
