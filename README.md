@@ -14,6 +14,18 @@
 <hr>
 <br>
 
+<h2>⬛️ Deadline:</h2>
+
+<p> 2 weeks project</p>
+<ul>
+  <li>From: 28-10-19</li>
+  <li>To: 08-11-19</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <h2>⬛️ The Project goals:</h2>
 
 <ul>
