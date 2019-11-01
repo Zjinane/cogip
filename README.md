@@ -8,7 +8,7 @@
 
 <p align="center">◽️ Website connected to a Database  ◽️</p>
 <br>
-<p align="center">◽️ <a href="https://github.com/Zjinane">Zjinane</a> - <a href="https://github.com/Shaunyx">Jeremy</a> - <a href="https://github.com/MathieuKruk">Mathieu</a> ◽️</p>
+<p align="center">◽️ <a href="https://github.com/Zjinane" target="_blank">Zjinane</a> - <a href="https://github.com/Shaunyx" target="_blank">Jeremy</a> - <a href="https://github.com/MathieuKruk" target="_blank">Mathieu</a> ◽️</p>
 
 <br>
 <hr>
