@@ -1,43 +1,63 @@
 <?php
 
-//connection à la Base de données
-function connectionDB(){
-
-// var de connection necéssaire à la db
-	$serverName = "database";
-	$userName = "root";
-	$password = "root";
-	$dbName = "cogip";
-
-// connection à la DB
-	$conn= mysqli_connect($servername,$username,$password,$dbName);
-	return $conn;
-
-
-//verification de la connection de la Db au php files.
-
-//	if (!$conn){
-//		die("connection impossible: " . mysqli_connect_errno());
-//	}
-//	echo "connection Réussie";
-
+		//connection à la Base de données
+		
+		function connectionDB(){
+		
+		//variable de connexion a la database
+	
+		$serverName = "database";
+		$userName = "root";
+		$password ="root";	
+		$dbName = "cogip";
+		
+		//connection a la database
+		$conn = mysqli_connect($serverName,$userName,$password,$dbName);
+		if (!$conn) {
+		die("Connection failed: " . mysqli_connect_error());
+			}
+		return $conn;
 };
 
+		//creer un utilisateur
+		function createUser($userName,$password,$usertype){
+		//insertion data dans la database
+		$sql = "INSERT INTO login (name,password,usertype) VALUES ('$userName', '$password', '$usertype')";
+		$result = mysqli_query(connectionDB(), $sql);
+		return $result;
+		};
+//createUser("test","test","user");
 
-//creer un utilisateur
-function createUser($userName,$password,$usertype){
+		//afficher tout les  utilisateurs ( lire un utilisateur)
+		function readAllUser(){
+		$sql = "SELECT name,usertype  FROM login";
+		$result = mysqli_query(connectionDB(), $sql);
 
-	// Ajouter dans la DB un utilisateur.
-	$sql = INSERT INTO login (name,password,usertype)
-	VALUE ($username, $password, $usertype)
-	return $sql;
-};
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "Username is   :  " . $row["name"]. "   Usertype is  : " . $row["usertype"]. "<br>";
+				}
+		}else{
+			echo "0 results";
+		}
+	};
 
 
-//afficher un utilisateur ( lire un utilisateur)
-function readUser($id){
+		//lire un contact 
+	function readUser($userName){
+		$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
+		$result = mysqli_query(connectionDB(), $sql);
 
-};
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "User selectionner : " . $row["name"]. " Type  : " . $row["usertype"]. "<br>";
+				}
+		}else{
+			echo "0 results";
+		}
+	};
+
+
 
 //mettre/modifier les infos de l'utilisateur
 function upDate($username, $password,$usertype){
