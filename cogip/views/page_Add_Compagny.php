@@ -16,15 +16,15 @@
 			<META NAME= »Language » CONTENT= »en »>
 
 			<!-- Author meta -->
-			<META NAME= »Author » CONTENT= »Gajwak, Mathieu Kruk »>
+			<META NAME= »Author » CONTENT= »Zjinane, Jeremy, Mathieu»>
 			<!-- Publisher meta -->
-			<META NAME= »Publisher » CONTENT= »Gajwak »>
+			<META NAME= »Publisher » CONTENT= »BeCode »>
 			<!-- Category meta -->
-			<META NAME= »Category » CONTENT= »MainSubject, tag01, tag02 »>
+			<META NAME= »Category » CONTENT= »Database, invoices, forms »>
 			<!-- Content meta -->
-			<META NAME= »Description » CONTENT= »Description of the content here »>
+			<META NAME= »Description » CONTENT= »Website that giving information about a database, CRUD forms»>
 			<!-- Tags meta -->
-			<META NAME= »Keywords » CONTENT= »PHP, Forms, Data»>
+			<META NAME= »Keywords » CONTENT= »PHP, Forms, DataManaging, SQL»>
 
 		<!-- BOOTSTRAP INSERTION -->
 		<!-- ########################################################################### -->
@@ -43,11 +43,11 @@
 			<script src="https://use.fontawesome.com/c5aedf01c1.js"></script>
 
 		<!-- FAVICON -->
-		<link rel="icon" type="image/png" href="assets/img/[...].png"/>
+		<link rel="icon" type="image/png" href="assets/img/logo.png"/>
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Compagnies
+				Cogip | New compagny
 			</title>
 
 	</head>
@@ -60,12 +60,75 @@
 	
 		<!-- HEADER -->
 		<header>	
-			<?php include 'navbar.php' ?>
+			<?php include 'bloc_Navbar.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+
+			<div class="container-fluid header">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<h3>Add a new compagny</h3>
+					</div>
+				</div>
+			</div>
 		</header>
 		
 		<!-- MAIN -->
 		<main>
-			 <h1></h1>
+
+			<div class="container">
+				<div class="row">
+					<div class="form rounded-lg col-10 offset-1">
+					
+						<form method="post" action="" autocomplete="on" id="form">
+
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="name col-md-6 col-12">
+									<!-- 💬 Name -->
+									<label for="formName">Name:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="name" id="formName" alt="Name of the compagny input"  placeholder="Type the name of the compagny here" value="<?php echo $name ?>"  />
+									<span class="error"><?php echo $name_err;?></span>
+								</div>
+
+								<div class="vat col-md-6 col-12">
+									<!-- 💬 VAT -->
+									<label for="formVat">VAT:</label>
+									<input  class="form-control shadow p-1" type="text" name="vat" id="formVat" alt="Vat of the compagny input" placeholder="Type the VAT of the compagny here" value="<?php echo $vat ?>"  />
+									<span class="error"><?php echo $vat_err;?></span>
+								</div>	
+							</div>
+
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="country col-md-6 col-12 ">	
+									<!-- ✳️ Country -->
+									<fieldset>
+										<label>Country:</label>
+											<select name="countries" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $country_err;?></span>
+								</div>
+							</div>
+									
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
+							</div>
+									
+						</form>
+					</div>
+				</div>
+			</div>
+
 		</main>
 
 		<!-- ASIDE -->
@@ -81,7 +144,7 @@
 		
 		<!-- FOOTER -->
 		<footer>
-					
+			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->

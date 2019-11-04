@@ -16,15 +16,15 @@
 			<META NAME= »Language » CONTENT= »en »>
 
 			<!-- Author meta -->
-			<META NAME= »Author » CONTENT= »Gajwak, Mathieu Kruk »>
+			<META NAME= »Author » CONTENT= »Zjinane, Jeremy, Mathieu»>
 			<!-- Publisher meta -->
-			<META NAME= »Publisher » CONTENT= »Gajwak »>
+			<META NAME= »Publisher » CONTENT= »BeCode »>
 			<!-- Category meta -->
-			<META NAME= »Category » CONTENT= »MainSubject, tag01, tag02 »>
+			<META NAME= »Category » CONTENT= »Database, invoices, forms »>
 			<!-- Content meta -->
-			<META NAME= »Description » CONTENT= »Description of the content here »>
+			<META NAME= »Description » CONTENT= »Website that giving information about a database, CRUD forms»>
 			<!-- Tags meta -->
-			<META NAME= »Keywords » CONTENT= »PHP, Forms, Data»>
+			<META NAME= »Keywords » CONTENT= »PHP, Forms, DataManaging, SQL»>
 
 		<!-- BOOTSTRAP INSERTION -->
 		<!-- ########################################################################### -->
@@ -43,11 +43,11 @@
 			<script src="https://use.fontawesome.com/c5aedf01c1.js"></script>
 
 		<!-- FAVICON -->
-		<link rel="icon" type="image/png" href="assets/img/[...].png"/>
+		<link rel="icon" type="image/png" href="assets/img/logo.png"/>
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Connexion
+				Cogip | Invoices
 			</title>
 
 	</head>
@@ -60,12 +60,48 @@
 	
 		<!-- HEADER -->
 		<header>	
-			<?php include 'navbar.php' ?>
+			<?php include 'bloc_Navbar.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+
+			<div class="container-fluid header">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<h3>Invoices</h3>
+					</div>
+				</div>
+			</div>
 		</header>
 		
 		<!-- MAIN -->
 		<main>
-			<?php include 'formLogin.php' ?>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
+						<table>
+							<tr>
+								<th>Invoice number</th>
+								<th>Dates</th>
+                                <th>Compagny</th>
+								<th>Type</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
 		</main>
 
 		<!-- ASIDE -->
@@ -81,7 +117,7 @@
 		
 		<!-- FOOTER -->
 		<footer>
-					
+			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->

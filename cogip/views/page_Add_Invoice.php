@@ -47,7 +47,7 @@
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Home
+				Cogip | New invoice
 			</title>
 
 	</head>
@@ -61,12 +61,12 @@
 		<!-- HEADER -->
 		<header>	
 			<?php include 'bloc_Navbar.php' ?>
-			<?php include 'bloc_Jumbotron.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
 
 			<div class="container-fluid header">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
-						<h3>Welcome</h3>
+						<h3>Add a new invoice</h3>
 					</div>
 				</div>
 			</div>
@@ -74,45 +74,90 @@
 		
 		<!-- MAIN -->
 		<main>
-		<!-- textbox -->
-		<div class="container-fluid textbox">
-			<div class="row">
-				<div class="col-12">
-					<p>Sumary of the latest data</p>
-				</div>
-			</div>
-		</div>
 
-		<!-- databox -->
-		<div class="container">
-			<div class="row">
-				<div class="col-10 offset-1 databox">
-					<p>Here is the databox</p>
-					<h6>Latest invoices:</h6>
-					<h6>Latest contacts:</h6>
-					<h6>Latest companies:</h6>
+			<div class="container">
+				<div class="row">
+					<div class="form rounded-lg col-10 offset-1">
+					
+						<form method="post" action="" autocomplete="on" id="form">
+
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="num col-md-6 col-12">
+									<!-- 💬 Invoice Num -->
+									<label for="formNum">Invoice Num:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="num" id="formNum" alt="New invoice num input"  placeholder="Type the new invoice num here" value="<?php echo $num ?>"  />
+									<span class="error"><?php echo $num_err;?></span>
+								</div>
+
+								<div class="ate col-md-6 col-12">
+									<!-- 💬 Date -->
+									<label for="formDate">Date:</label>
+									<input  class="form-control shadow p-1" type="text" name="date" id="formDate" alt="New date input" placeholder="Type the new invoice date here" value="<?php echo $date ?>"  />
+									<span class="error"><?php echo $date_err;?></span>
+								</div>	
+							</div>
+							
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="compagny col-md-6 col-12 ">	
+									<!-- ✳️ Companies -->
+									<fieldset>
+										<label>Compagny:</label>
+											<select name="compagnies" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $compagny_err;?></span>
+								</div>
+
+								<div class="contact col-md-6 col-12 ">	
+									<!-- ✳️ Contact person -->
+									<fieldset>
+										<label>Contact person:</label>
+											<select name="contact" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $contact_err;?></span>
+								</div>
+							</div>
+
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
+							</div>
+									
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
-			
+
 		</main>
+
+		<!-- ASIDE -->
+		<aside>
+
+		</aside>
 
 		<!-- SECTION -->
 		<section>
-			<div class="container-fluid d-flex justify-content-center">
-				<div class="row">
-					<div class="col-10 offset-1 buttonbox">
-						<button type="button" class="btn newContact">New Contact</button>
-						<button type="button" class="btn newInvoice">New Invoice</button>
-						<button type="button" class="btn newCompagny">New Compagny</button>
-					</div>
-				</div>
-			</div>			
+				<h2></h2>
+					<p></p>			
 		</section>
 		
 		<!-- FOOTER -->
 		<footer>
-			<?php include 'bloc_Footer.php' ?>		
+			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->

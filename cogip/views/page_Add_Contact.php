@@ -47,7 +47,7 @@
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Home
+				Cogip | New contact
 			</title>
 
 	</head>
@@ -61,12 +61,12 @@
 		<!-- HEADER -->
 		<header>	
 			<?php include 'bloc_Navbar.php' ?>
-			<?php include 'bloc_Jumbotron.php' ?>
+			<!--<?php include 'bloc_Jumbotron.php' ?> -->
 
 			<div class="container-fluid header">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
-						<h3>Welcome</h3>
+						<h3>Add a new contact</h3>
 					</div>
 				</div>
 			</div>
@@ -74,45 +74,84 @@
 		
 		<!-- MAIN -->
 		<main>
-		<!-- textbox -->
-		<div class="container-fluid textbox">
-			<div class="row">
-				<div class="col-12">
-					<p>Sumary of the latest data</p>
-				</div>
-			</div>
-		</div>
 
-		<!-- databox -->
-		<div class="container">
-			<div class="row">
-				<div class="col-10 offset-1 databox">
-					<p>Here is the databox</p>
-					<h6>Latest invoices:</h6>
-					<h6>Latest contacts:</h6>
-					<h6>Latest companies:</h6>
+			<div class="container">
+				<div class="row">
+					<div class="form rounded-lg col-10 offset-1">
+					
+						<form method="post" action="" autocomplete="on" id="form">
+
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="firstname col-md-6 col-12">
+									<!-- 💬 firstname -->
+									<label for="formFirstname">Firstname:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="firstname" id="formFirstname" alt="Your firstname input"  placeholder="Type your firstname here" value="<?php echo $firstname ?>"  />
+									<span class="error"><?php echo $firstname_err;?></span>
+								</div>
+
+								<div class="lastname col-md-6 col-12">
+									<!-- 💬 lastname -->
+									<label for="formLastname">Lastname:</label>
+									<input  class="form-control shadow p-1" type="text" name="lastname" id="formLastname" alt="Your lastname input" placeholder="Type your lastame here" value="<?php echo $lastname ?>"  />
+									<span class="error"><?php echo $lastname_err;?></span>
+								</div>	
+							</div>
+
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="email col-md-6 col-12">
+									<!-- 💬 Email -->
+									<label for="formEmail">E-mail:</label>
+									<input  class="form-control shadow p-1" type="text" name="email" id="formEmail" alt="Your email input" placeholder="email@example.com" value="<?php echo $email ?>"  />
+									<span class="error"><?php echo $email_err;?></span>
+								</div>
+
+								<div class="compagny col-md-6 col-12 ">	
+									<!-- ✳️ Companies -->
+									<fieldset>
+										<label>Compagny:</label>
+											<select name="compagny" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $compagny_err;?></span>
+								</div>
+							</div>
+									
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
+							</div>
+									
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
-			
+
 		</main>
+
+		<!-- ASIDE -->
+		<aside>
+
+		</aside>
 
 		<!-- SECTION -->
 		<section>
-			<div class="container-fluid d-flex justify-content-center">
-				<div class="row">
-					<div class="col-10 offset-1 buttonbox">
-						<button type="button" class="btn newContact">New Contact</button>
-						<button type="button" class="btn newInvoice">New Invoice</button>
-						<button type="button" class="btn newCompagny">New Compagny</button>
-					</div>
-				</div>
-			</div>			
+				<h2></h2>
+					<p></p>			
 		</section>
 		
 		<!-- FOOTER -->
 		<footer>
-			<?php include 'bloc_Footer.php' ?>		
+			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->
