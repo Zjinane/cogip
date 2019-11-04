@@ -1,0 +1,265 @@
+body {
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/escheresque.png);
+  background-color: white;
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bolder;
+}
+
+form {
+  background-color: rgba(106, 106, 106, 0.762);
+  padding: 1rem;
+}
+
+form label {
+  font-size: 16pt;
+}
+
+.navbar {
+  margin-bottom: 0.5rem;
+  background-color: #361c0b !important;
+}
+
+.dropdown-menu {
+  width: 50px;
+  margin-left: 0.5rem;
+}
+
+.navlogo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.nav-brand p {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.nav-link {
+  font-size: 12pt !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.nav-item i {
+  margin-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jumbotron {
+  margin-bottom: 0.5rem;
+  background-color: #009460;
+  background-image: url(https://hdwallsource.com/img/2014/4/minimal-retro-wallpaper-41507-42475-hd-wallpapers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  text-align: left;
+}
+
+.jumbotron p {
+  font-size: 18pt;
+}
+
+.jumbotron h1 {
+  text-align: left;
+  font-size: 25pt;
+}
+
+.header {
+  background-color: #009460;
+  margin-bottom: 0.5rem;
+}
+
+.header h3 {
+  font-size: 16pt;
+  margin: 0.5rem;
+}
+
+.textbox {
+  background-color: red;
+}
+
+.databox {
+  background-color: yellow;
+}
+
+.buttonbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.reset {
+  background-color: #744124;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #744124;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.newContact {
+  background-color: #008f40;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.newInvoice {
+  background-color: #008dce;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.newCompagny {
+  background-color: #a803ae;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 10;
+}
+
+.footer {
+  color: white;
+  background-color: #009460;
+}
+
+.footer .social-media {
+  height: 40px;
+}
+
+.footer .copyright {
+  height: 40px;
+}
+
+.footer small {
+  font-size: 12pt;
+}
+
+.footer i {
+  color: white;
+  margin: 0.5rem;
+  font-size: 25px;
+  width: 50px !important;
+}
+
+.footer i:hover {
+  color: #4a2611;
+}
+
+.table-contacts table {
+  border: 3px solid #361c0b;
+}
+
+.table-contacts th {
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
+  color: whitesmoke;
+  background-color: white;
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  padding: 1rem;
+  border: 2px solid #361c0b;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.table-contacts td {
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  border: 1px solid #361c0b;
+  text-align: left;
+  font-size: 12pt;
+}
+
+.table-break td {
+  border: solid 2px black !important;
+}
+
+.table-break th {
+  border: solid 2px black !important;
+}
+/*# sourceMappingURL=style.css.map */
