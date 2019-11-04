@@ -1,3 +1,11 @@
+<?PHP
+session_start();
+if (!$_SESSION['logged']){
+	header('location:page_Login.php');
+}
+require("../controlers/controleur.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
@@ -100,12 +108,7 @@
 		<!-- SECTION -->
 		<section>
 			<div class="container-fluid d-flex justify-content-center">
-				<div class="row">
-					<div class="col-10 offset-1 buttonbox">
-						<button type="button" class="btn newContact">New Contact</button>
-						<button type="button" class="btn newInvoice">New Invoice</button>
-						<button type="button" class="btn newCompagny">New Compagny</button>
-					</div>
+				<?php $btn ?>
 				</div>
 			</div>			
 		</section>

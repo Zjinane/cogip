@@ -1,3 +1,8 @@
+<?php 
+require("../controlers/controleur.php");
+
+
+?>
 <div class="container">
 	<div class="row">
 		<div class="form rounded-lg col-10 offset-1">

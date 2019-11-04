@@ -1,31 +1,11 @@
 <?php
-
-		//connection à la Base de données
-
-		function connectionDB(){
-		
-		//variable de connexion pour la database
-	
-		$serverName = "database";
-		$userName = "root";
-		$password ="root";	
-		$dbName = "cogip";
-		
-		//connection a la database 
-		$conn = mysqli_connect($serverName,$userName,$password,$dbName);
-		if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-			}
-		return $conn;
-};
-/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
-
+require("connection.php");
 
 		//creer un utilisateur ( un nouveau utilisateur ) 
 		function createUser($userName,$password,$usertype){
 		//insertion data dans la database
 		$sql = "INSERT INTO login (name,password,usertype) VALUES ('$userName', '$password', '$usertype')";
-		$result = mysqli_query(connectionDB(), $sql);
+		$result = mysqli_query($conn, $sql);
 		return $result;
 		};
 //createUser("test","test","user");
@@ -36,7 +16,7 @@
 		//afficher tout les  utilisateurs ( lire tous les  utilisateur)
 		function readAllUser(){
 			$sql = "SELECT name,usertype  FROM login";
-			$result = mysqli_query(connectionDB(), $sql);
+			$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
@@ -54,7 +34,7 @@
 
 		function readUser($userName){
 			$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
-			$result = mysqli_query(connectionDB(), $sql);
+			$result = mysqli_query($conn, $sql);
 
 			if (mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_assoc($result)) {
@@ -74,7 +54,7 @@
 		function upDateUser($username, $password,$usertype,$id){
 			//$id = $_GET["id"];
 			$sql ="UPDATE contacts SET firstname ='$username', password='$password', usertype ='$usertype' WHERE id = '$id' " ;
-			$result = mysqli_query(connectionDB(), $sql);
+			$result = mysqli_query($conn, $sql);
 			return $result ;
 		};	
 
@@ -86,8 +66,8 @@
 
 		function deleteUser($id){
 		$id = $_GET["id"];
-		$sql = "DELETE FROM contacts WHERE  id = '" . $id  "' ";
-		$result = mysqli_query(connectionDB(),$sql);
+		$sql = "DELETE FROM contacts WHERE  id = ' $id' ";
+		$result = mysqli_query($conn,$sql);
 		return $result;
 		};
 ?>

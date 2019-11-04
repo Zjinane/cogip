@@ -31,7 +31,6 @@ function connectionDB(){
 		return $result;
 		};
 //createUser("test","test","user");
-};
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
@@ -85,7 +84,7 @@ function upDateInvoice($num,$date,$fk_contacts,$id){
 //supprimer une instance ( supprimer une row de la DB)
 function deleteInvoice($id){
 		$id = $_GET["id"];
-		$sql = "DELETE FROM invoices WHERE  id = '" . $id  "' ";
+		$sql = "DELETE FROM invoices WHERE  id = ' $id  ' ";
 		$result = mysqli_query(connectionDB(),$sql);
 		return $result;
 

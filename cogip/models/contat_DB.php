@@ -1,23 +1,6 @@
 <?php
 
-		//connection à la Base de données
-		
-		function connectionDB(){
-		
-		//variable de connexion a la database
-	
-		$serverName = "database";
-		$userName = "root";
-		$password ="root";	
-		$dbName = "cogip";
-		
-		//connection a la database
-		$conn = mysqli_connect($serverName,$userName,$password,$dbName);
-		if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-			}
-		return $conn;
-};
+require("connection.php");
 	//	// Fonction de menu déroulant pour le choix de pays dans la page contact
 		
 	//	$sql= "SELECT name FROM compagnies";
@@ -33,10 +16,10 @@
 		//insertion data dans la database
 
 		$sql = "INSERT INTO contacts (firstname,lastname,email,fk_companies) VALUES ('$firstname', '$lastname', '$email',$type)";
-		if (mysqli_query(connectionDB(), $sql)) {
+		if (mysqli_query($conn, $sql)) {
 			echo "New record created successfully";
 		}else{
-			echo "Error: " . $sql . "<br>" . mysqli_error(connectionDB());
+			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 		}
 	return $sql;
 };
@@ -47,7 +30,7 @@
 		//permets de lire tous les contacts et de les afficher
 		function readAllContact(){
 		$sql = "SELECT firstname, lastname, email  FROM contacts";
-		$result = mysqli_query(connectionDB(), $sql);
+		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
@@ -64,7 +47,7 @@
 		//lire un contact 
 		function readContact($firstname, $lastname){
 		$sql = "SELECT firstname, lastname, email  FROM contacts WHERE firstname = '$firstname' && lastname = '$lastname'";
-		$result = mysqli_query(connectionDB(), $sql);
+		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
@@ -81,7 +64,7 @@
 		function upDateContact($firstname,$lastname,$email,$fk,$id){
 		//$id = $_GET["id"];
 		$sql ="UPDATE contacts SET firstname ='$firstname', lastname='$lastname', email ='$email', fk_companies ='$fk' WHERE id = '$id' " ;
-		$result = mysqli_query(connectionDB(), $sql);
+		$result = mysqli_query($conn, $sql);
 		return $result ;
 	};	
 
@@ -154,7 +137,7 @@
 		function deleteContact($firstname, $lastname){
 
 		$sql = "DELETE FROM contacts WHERE  firstname = '" . $firstname . "' && lastname = '" . $lastname. "' limit 1 ";
-		$result = mysqli_query(connectionDB(),$sql);
+		$result = mysqli_query($conn,$sql);
 		return $result;
 		};
 
