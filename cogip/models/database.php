@@ -60,14 +60,22 @@
 
 
 //mettre/modifier les infos de l'utilisateur
-function upDate($username, $password,$usertype){
+	function upDateUser($username, $password,$usertype,$id){
+		//$id = $_GET["id"];
+		$sql ="UPDATE contacts SET firstname ='$username', password='$password', usertype ='$usertype' WHERE id = '$id' " ;
+		$result = mysqli_query(connectionDB(), $sql);
+		return $result ;
+	};	
 
-};
+
+		function deleteUser($id){
+		$id = $_GET["id"];
+		$sql = "DELETE FROM contacts WHERE  id = '" . $id  "' ";
+		$result = mysqli_query(connectionDB(),$sql);
+		return $result;
+		};
 
 
-//supprimer une instance ( supprimer une row de la DB)
-function deleteUser($id){
 
-};
 
 ?>

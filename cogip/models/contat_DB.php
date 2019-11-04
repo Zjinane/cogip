@@ -40,7 +40,7 @@
 		}
 	return $sql;
 };
-
+//createContac("math","math","hjh","1");
 //#################################################################################
 
 		//permets de lire tous les contacts et de les afficher
@@ -156,7 +156,7 @@
 		return $result;
 		};
 
-	//deleteContact("lala","lolo")
+//	deleteContact("lala","lolo");
 
 
 
