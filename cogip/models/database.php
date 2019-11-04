@@ -1,25 +1,27 @@
 <?php
 
 		//connection à la Base de données
-		
+
 		function connectionDB(){
 		
-		//variable de connexion a la database
+		//variable de connexion pour la database
 	
 		$serverName = "database";
 		$userName = "root";
 		$password ="root";	
 		$dbName = "cogip";
 		
-		//connection a la database
+		//connection a la database 
 		$conn = mysqli_connect($serverName,$userName,$password,$dbName);
 		if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 			}
 		return $conn;
 };
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
-		//creer un utilisateur
+
+		//creer un utilisateur ( un nouveau utilisateur ) 
 		function createUser($userName,$password,$usertype){
 		//insertion data dans la database
 		$sql = "INSERT INTO login (name,password,usertype) VALUES ('$userName', '$password', '$usertype')";
@@ -28,44 +30,58 @@
 		};
 //createUser("test","test","user");
 
-		//afficher tout les  utilisateurs ( lire un utilisateur)
+
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+		//afficher tout les  utilisateurs ( lire tous les  utilisateur)
 		function readAllUser(){
-		$sql = "SELECT name,usertype  FROM login";
-		$result = mysqli_query(connectionDB(), $sql);
+			$sql = "SELECT name,usertype  FROM login";
+			$result = mysqli_query(connectionDB(), $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "Username is   :  " . $row["name"]. "   Usertype is  : " . $row["usertype"]. "<br>";
+				echo "Userna is   :  " . $row["name"]. "   Usertype is  : " . $row["usertype"]. "<br>";
 				}
 		}else{
 			echo "0 results";
 		}
 	};
 
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 		//lire un contact 
-	function readUser($userName){
-		$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
-		$result = mysqli_query(connectionDB(), $sql);
-
-		if (mysqli_num_rows($result) > 0) {
-			while($row = mysqli_fetch_assoc($result)) {
-				echo "User selectionner : " . $row["name"]. " Type  : " . $row["usertype"]. "<br>";
-				}
-		}else{
-			echo "0 results";
-		}
-	};
 
 
+		function readUser($userName){
+			$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
+			$result = mysqli_query(connectionDB(), $sql);
 
-//mettre/modifier les infos de l'utilisateur
-	function upDateUser($username, $password,$usertype,$id){
-		//$id = $_GET["id"];
-		$sql ="UPDATE contacts SET firstname ='$username', password='$password', usertype ='$usertype' WHERE id = '$id' " ;
-		$result = mysqli_query(connectionDB(), $sql);
-		return $result ;
-	};	
+			if (mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_assoc($result)) {
+					echo "User selectionner : " . $row["name"]. " Type  : " . $row["usertype"]. "<br>";
+					}
+			}else{
+				echo "0 results";
+			}
+		};
+
+
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+		//mettre/modifier les infos de l'utilisateur
+
+
+		function upDateUser($username, $password,$usertype,$id){
+			//$id = $_GET["id"];
+			$sql ="UPDATE contacts SET firstname ='$username', password='$password', usertype ='$usertype' WHERE id = '$id' " ;
+			$result = mysqli_query(connectionDB(), $sql);
+			return $result ;
+		};	
+
+
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+		// Delete un user selon son ID ( seul élément unique à chacun )
 
 
 		function deleteUser($id){
@@ -74,8 +90,4 @@
 		$result = mysqli_query(connectionDB(),$sql);
 		return $result;
 		};
-
-
-
-
 ?>
