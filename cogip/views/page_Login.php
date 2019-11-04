@@ -16,15 +16,15 @@
 			<META NAME= »Language » CONTENT= »en »>
 
 			<!-- Author meta -->
-			<META NAME= »Author » CONTENT= »Gajwak, Mathieu Kruk »>
+			<META NAME= »Author » CONTENT= »Zjinane, Jeremy, Mathieu»>
 			<!-- Publisher meta -->
-			<META NAME= »Publisher » CONTENT= »Gajwak »>
+			<META NAME= »Publisher » CONTENT= »BeCode »>
 			<!-- Category meta -->
-			<META NAME= »Category » CONTENT= »MainSubject, tag01, tag02 »>
+			<META NAME= »Category » CONTENT= »Database, invoices, forms »>
 			<!-- Content meta -->
-			<META NAME= »Description » CONTENT= »Description of the content here »>
+			<META NAME= »Description » CONTENT= »Website that giving information about a database, CRUD forms»>
 			<!-- Tags meta -->
-			<META NAME= »Keywords » CONTENT= »PHP, Forms, Data»>
+			<META NAME= »Keywords » CONTENT= »PHP, Forms, DataManaging, SQL»>
 
 		<!-- BOOTSTRAP INSERTION -->
 		<!-- ########################################################################### -->

@@ -5,10 +5,10 @@
 // <$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$>
 // - COLORS                                                                                                             <$> 
 // <$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$>
-$primaryColor: rgb(223, 134, 33);
-$secondaryColor: rgb(116, 65, 36);
-$tertiaryColor: rgb(187, 59, 0);
-$quaternaryColor: rgba(255, 81, 0, 0.979);
+$primaryColor: rgb(0, 148, 96);
+$secondaryColor: rgb(54, 28, 11);
+$tertiaryColor: rgb(74, 38, 17);
+$quaternaryColor: rgba(223, 65, 2, 0.979);
 
 $backgroundColor: $primaryColor;
 
@@ -65,6 +65,7 @@ form {
         justify-content: left;
         width: 30px;
         height: 30px;
+        margin-right: 0.5rem;
     }
 }
 .nav-brand {
@@ -88,10 +89,23 @@ form {
 // * Jumbotron
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 .jumbotron {
+    margin-bottom: 0.5rem;
     background-color: $primaryColor;
+    background-image: url(https://hdwallsource.com/img/2014/4/minimal-retro-wallpaper-41507-42475-hd-wallpapers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 200px;
+    text-align: left;
+    p {
+        font-size: 18pt 
+    }
     h1 {
+        text-align: left;
         font-size: 25pt;
+    }
+    .jumbotron-picture {
+
     }
 }
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -205,6 +219,7 @@ form {
 // * Footer 
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 .footer {
+    color:  white;
     background-color: $footerColor;
     .social-media {
         height: 40px;
@@ -216,11 +231,14 @@ form {
         font-size: 12pt;
     }
     i {
-        color:  $secondaryColor;
+        color: white;
         margin: 0.5rem;
         font-size: 25px;
         width: 50px !important;
     } 
+    i:hover {
+        color: blue;
+    }
 }
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 // * Tables

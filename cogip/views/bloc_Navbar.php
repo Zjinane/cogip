@@ -4,10 +4,9 @@
 
   <!-- Navbar brand + Navbar logo -->
   <a class="navbar-brand" href="index.php">
-    <div class="navlogo">
-      <img src="assets/img/logo.png" >
+    <div class="navlogo d-flex justify-content-center">
+      <img src="assets/img/logo.png" ><p>Cogip</p>
     </div>
-    <p>Cogip</p>
   </a>
   
   <!-- Collapse button -->

@@ -25,7 +25,7 @@ form label {
 
 .navbar {
   margin-bottom: 0.5rem;
-  background-color: #744124 !important;
+  background-color: #361c0b !important;
 }
 
 .dropdown-menu {
@@ -42,6 +42,7 @@ form label {
           justify-content: left;
   width: 30px;
   height: 30px;
+  margin-right: 0.5rem;
 }
 
 .nav-brand p {
@@ -71,16 +72,27 @@ form label {
 }
 
 .jumbotron {
-  background-color: #df8621;
+  margin-bottom: 0.5rem;
+  background-color: #009460;
+  background-image: url(https://hdwallsource.com/img/2014/4/minimal-retro-wallpaper-41507-42475-hd-wallpapers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 200px;
+  text-align: left;
+}
+
+.jumbotron p {
+  font-size: 18pt;
 }
 
 .jumbotron h1 {
+  text-align: left;
   font-size: 25pt;
 }
 
 .header {
-  background-color: #df8621;
+  background-color: #009460;
   margin-bottom: 0.5rem;
 }
 
@@ -191,7 +203,8 @@ form label {
 }
 
 .footer {
-  background-color: #df8621;
+  color: white;
+  background-color: #009460;
 }
 
 .footer .social-media {
@@ -207,14 +220,18 @@ form label {
 }
 
 .footer i {
-  color: #744124;
+  color: white;
   margin: 0.5rem;
   font-size: 25px;
   width: 50px !important;
 }
 
+.footer i:hover {
+  color: blue;
+}
+
 .table-contacts table {
-  border: 3px solid #744124;
+  border: 3px solid #361c0b;
 }
 
 .table-contacts th {
@@ -225,7 +242,7 @@ form label {
   background-size: auto;
   background-position: center;
   padding: 1rem;
-  border: 2px solid #744124;
+  border: 2px solid #361c0b;
   text-align: center;
   font-size: 16pt;
 }
@@ -233,7 +250,7 @@ form label {
 .table-contacts td {
   background-color: whitesmoke;
   padding: 0.5rem;
-  border: 1px solid #744124;
+  border: 1px solid #361c0b;
   text-align: left;
   font-size: 12pt;
 }

@@ -47,7 +47,7 @@
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | Invoices
+				Cogip | Home
 			</title>
 
 	</head>
@@ -61,12 +61,12 @@
 		<!-- HEADER -->
 		<header>	
 			<?php include 'bloc_Navbar.php' ?>
-			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+			<?php include 'bloc_Jumbotron.php' ?>
 
-			<div class="container-fluid header">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-12 d-flex justify-content-center">
-						<h3>Invoices</h3>
+					<div class="col-12 d-flex justify-content-center header">
+						<h3>Welcome</h3>
 					</div>
 				</div>
 			</div>
@@ -74,50 +74,45 @@
 		
 		<!-- MAIN -->
 		<main>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
-						<table>
-							<tr>
-								<th>Invoice number</th>
-								<th>Dates</th>
-                                <th>Compagny</th>
-								<th>Type</th>
-								<th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-							</tr>
-						</table>
-					</div>
+		<!-- textbox -->
+		<div class="container-fluid textbox">
+			<div class="row">
+				<div class="col-12">
+					<p>Sumary of the latest data</p>
 				</div>
 			</div>
+		</div>
+
+		<!-- databox -->
+		<div class="container">
+			<div class="row">
+				<div class="col-10 offset-1 databox">
+					<p>Here is the databox</p>
+					<h6>Latest invoices:</h6>
+					<h6>Latest contacts:</h6>
+					<h6>Latest companies:</h6>
+				</div>
+			</div>
+		</div>
 			
 		</main>
 
-		<!-- ASIDE -->
-		<aside>
-
-		</aside>
-
 		<!-- SECTION -->
 		<section>
-				<h2></h2>
-					<p></p>			
+			<div class="container-fluid d-flex justify-content-center">
+				<div class="row">
+					<div class="col-10 offset-1 buttonbox">
+						<button type="button" class="btn newContact">New Contact</button>
+						<button type="button" class="btn newInvoice">New Invoice</button>
+						<button type="button" class="btn newCompagny">New Compagny</button>
+					</div>
+				</div>
+			</div>			
 		</section>
 		
 		<!-- FOOTER -->
 		<footer>
-			<?php include 'bloc_Footer.php' ?>	
+			<?php include 'bloc_Footer.php' ?>		
 		</footer>		
 		
 	<!-- BOOTSTRAP JQUERY AND JS INSERTION -->
