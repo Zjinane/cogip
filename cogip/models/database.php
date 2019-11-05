@@ -1,20 +1,22 @@
 <?php
-require("connection.php");
 
 		//creer un utilisateur ( un nouveau utilisateur ) 
 		function createUser($userName,$password,$usertype){
+		$conn = mysqli_connect("database","root","root","cogip");
+
 		//insertion data dans la database
 		$sql = "INSERT INTO login (name,password,usertype) VALUES ('$userName', '$password', '$usertype')";
 		$result = mysqli_query($conn, $sql);
 		return $result;
 		};
-//createUser("test","test","user");
+//createUser("user","user","user");
 
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 		//afficher tout les  utilisateurs ( lire tous les  utilisateur)
 		function readAllUser(){
+		$conn = mysqli_connect("database","root","root","cogip");
 			$sql = "SELECT name,usertype  FROM login";
 			$result = mysqli_query($conn, $sql);
 

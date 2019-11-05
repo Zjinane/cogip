@@ -15,7 +15,7 @@
 				<div class="username col-md-6 col-12">
 					<!-- 💬 Username -->
 					<label for="formUsername">Username:</label>
-					<input  class="form-control shadow p-1" type="text" size="20" name="usernamereg" id="formUsername" alt="Your username input"  placeholder="Type your Username here" value="<?php echo $username ?>"  />
+					<input  class="form-control shadow p-1" type="text" size="20" name="usernamereg" id="formUsername" alt="Your username input"  placeholder="Type your Username here" value="<?php echo $creatUsername ?>"  />
 					<span class="error"><?php echo $username_err;?></span>
 				</div>
 
@@ -54,7 +54,7 @@
 
 				<div class="col-md-6 d-flex justify-content-center">	
 					<!-- Submit button -->
-					<input class="btn btn-primary" type="submit" value="SUBMIT">
+					<input class="btn btn-primary" type="submit" name="creatUser"  value="SUBMIT">
 				</div>
 			</div>
 			

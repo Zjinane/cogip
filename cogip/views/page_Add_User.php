@@ -1,3 +1,7 @@
+<?php 
+require("../controlers/index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
@@ -74,7 +78,7 @@
 		
 		<!-- MAIN -->
 		<main>
-			<?php include 'bloc_Navbar.php' ?>
+			<?php include 'form_Add_User.php' ?>
 		</main>
 
 		<!-- ASIDE -->
