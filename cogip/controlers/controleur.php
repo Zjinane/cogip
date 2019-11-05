@@ -38,16 +38,33 @@ function check_Unique_Username($username){
     }
 
 
-//################################### USERTYPE ###:w#################################"
+//################################### Admin ####################################"
 
 
-function user(){
+function Admin_nav(){
+
+if($_SESSION['usertype'] == "superuser"){
+echo	$btn ='
+      <li class="nav-item dropdown d-flex justify-content-end">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ⚬ Admin
+        </a>
+        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="page_Add_User.php">New Cogip user</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="page_Add_Contact.php">New contact</a>
+          <a class="dropdown-item" href="page_Add_Invoice.php">New invoice</a>
+          <a class="dropdown-item" href="page_Add_Compagny.php">New compagny</a>
+        </div>
+        <i class="nav-link fa fa-user" aria-hidden="true"></i>
+      </li>
+' ;
+	}
 };
 
 
-function btn(){
-
-if($_SESSION["usertype"] == "superuser"){
+function Admin_btn(){
+if($_SESSION['usertype'] == "superuser"){
 echo	$btn = '<div class="row">
 					<div class="col-10 offset-1 buttonbox">
 						<button type="button" class="btn newContact">New Contact</button>
@@ -65,9 +82,16 @@ $btncreateUser = $_POST['creatUser'];
 
 if(isset($btncreateUser)){
 createUser("$createUsername","$createPassword","$createUsertype");
-echo "<p>OK </p>";
+echo "<p>Ok User register </p>";
 }
 
-//###########################################################################################
+//##########################################    #################################################
+
+
+
+
+
+
+
 
 ?>

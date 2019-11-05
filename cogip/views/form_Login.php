@@ -1,7 +1,3 @@
-<?php 
-
-
-?>
 <div class="container">
 	<div class="row">
 		<div class="form rounded-lg col-10 offset-1">
@@ -29,7 +25,7 @@
 				<div class="row">
 					<div class="col-md-6 d-flex justify-content-center">	
 						<!-- Reset button -->
-						<input class="btn btn-primary" type="reset" value="RESET" onclick="forceReset();">
+						<input class="btn btn-primary" type="reset" value="RESET">
 					</div>
 
 					<div class="col-md-6 d-flex justify-content-center">	

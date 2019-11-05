@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
 	if (isset($username) and isset($password)) {
 		// recupére les elements du formulair page login
 		$conn = mysqli_connect("database","root","root","cogip");
-		$sql = "SELECT password, name FROM login WHERE name = '$username';";
+		$sql = "SELECT password, name,usertype FROM login WHERE name = '$username';";
 		$result = mysqli_query($conn,$sql);
 		$row=mysqli_fetch_assoc($result);
 	

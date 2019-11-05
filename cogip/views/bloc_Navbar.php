@@ -35,22 +35,8 @@
         </div>
         <i class="nav-link fa fa-sign-in" aria-hidden="true"></i>
       </li>
-
-      <!-- ADMIN -->
-      <li class="nav-item dropdown d-flex justify-content-end">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ⚬ Admin
-        </a>
-        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="page_Add_User.php">New Cogip user</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="page_Add_Contact.php">New contact</a>
-          <a class="dropdown-item" href="page_Add_Invoice.php">New invoice</a>
-          <a class="dropdown-item" href="page_Add_Compagny.php">New compagny</a>
-        </div>
-        <i class="nav-link fa fa-user" aria-hidden="true"></i>
-      </li>
-
+<?php Admin_nav(); ?>
+      
       <!-- COMPANIES -->
       <li class="nav-item">
         <a class="nav-link" href="page_Companies.php" rel="noreferrer">⚬ Companies<i class="fa fa-building-o" aria-hidden="true"></i></a>

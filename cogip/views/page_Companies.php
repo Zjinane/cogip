@@ -1,3 +1,10 @@
+<?PHP
+session_start();
+if (!$_SESSION['logged']){
+	header('location:page_Login.php');
+}
+require("../controlers/controleur.php");
+?>
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
@@ -88,10 +95,7 @@
                                 <th>Update</th>
                                 <th>Delete</th>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<?php readAllEntrepriseClient();?>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -114,10 +118,7 @@
                                 <th>Update</th>
                                 <th>Delete</th>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<?php readAllEntreprisePro();?>
                                 <td></td>
                                 <td></td>
                                 <td></td>

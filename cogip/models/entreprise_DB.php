@@ -19,21 +19,45 @@ function createEntreprise($name,$vat,$country,$fk_types){
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 //afficher les entreprises ( lire les entreprises)
-function readAllEntreprise(){
+function readAllEntrepriseClient(){
 	$conn = mysqli_connect("database","root","root","cogip");
 
-		$sql = "SELECT name,vat,country  FROM companies";
+		$sql = "SELECT name,vat,country  FROM companies WHERE fk_types = 1";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "name is   :  " . $row["name"]. "   vat is  : " . $row["vat"]. "country is  : " .$row["coutry"]. "<br>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td>";
 				}
 		}else{
 			echo "0 results";
 		}
 
 };
+
+
+
+//afficher les entreprises ( lire les entreprises)
+function readAllEntreprisePro(){
+	$conn = mysqli_connect("database","root","root","cogip");
+
+		$sql = "SELECT name,vat,country  FROM companies WHERE fk_types = 2";
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td>";
+				}
+		}else{
+			echo "0 results";
+		}
+
+};
+
+
+
+
+
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 

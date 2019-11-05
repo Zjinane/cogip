@@ -108,7 +108,7 @@ require("../controlers/controleur.php");
 		<!-- SECTION -->
 		<section>
 			<div class="container-fluid d-flex justify-content-center">
-				<?php btn(); ?>
+				<?php Admin_btn(); ?>
 				</div>
 			</div>			
 		</section>
