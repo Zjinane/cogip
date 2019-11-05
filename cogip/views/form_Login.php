@@ -13,14 +13,14 @@
 					<div class="username col-md-6 col-12">
 						<!-- 💬 Username -->
 						<label for="formUsername">Username:</label>
-						<input  class="form-control shadow p-1" type="text" size="20" name="username" id="formUsername" alt="Your username input"  placeholder="Type your Username here" value="<?php echo $username ?>"  />
+						<input  class="form-control shadow p-1" type="text" size="20" name="username" id="formUsername" alt="Your username input"  placeholder="Type your Username here" value=""  />
 						<span class="error"><?php echo $username_err;?></span>
 					</div>
 
 					<div class="password col-md-6 col-12">
 						<!-- 💬 Password -->
 						<label for="formPassword">Password:</label>
-						<input  class="form-control shadow p-1" type="password" name="password" id="formPassword" placeholder="Type your password here" value="<?php echo $password ?>"   alt="Your password input"/>
+						<input  class="form-control shadow p-1" type="password" name="password" id="formPassword" placeholder="Type your password here" value=""   alt="Your password input"/>
 						<span class="error"><?php echo $password_err;?></span>
 					</div>	
 				</div>

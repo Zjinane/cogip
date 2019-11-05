@@ -3,7 +3,6 @@
 		//creer un utilisateur ( un nouveau utilisateur ) 
 		function createUser($userName,$password,$usertype){
 		$conn = mysqli_connect("database","root","root","cogip");
-
 		//insertion data dans la database
 		$sql = "INSERT INTO login (name,password,usertype) VALUES ('$userName', '$password', '$usertype')";
 		$result = mysqli_query($conn, $sql);
@@ -35,12 +34,14 @@
 
 
 		function readUser($userName){
-			$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
-			$result = mysqli_query($conn, $sql);
+		$conn = mysqli_connect("database","root","root","cogip");
 
-			if (mysqli_num_rows($result) > 0) {
-				while($row = mysqli_fetch_assoc($result)) {
-					echo "User selectionner : " . $row["name"]. " Type  : " . $row["usertype"]. "<br>";
+		$sql = "SELECT name,usertype  FROM login WHERE name = '$userName'";
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+			echo "User selectionner : " . $row["name"]. " Type  : " . $row["usertype"]. "<br>";
 					}
 			}else{
 				echo "0 results";
@@ -54,6 +55,8 @@
 
 
 		function upDateUser($username, $password,$usertype,$id){
+			$conn = mysqli_connect("database","root","root","cogip");
+
 			//$id = $_GET["id"];
 			$sql ="UPDATE contacts SET firstname ='$username', password='$password', usertype ='$usertype' WHERE id = '$id' " ;
 			$result = mysqli_query($conn, $sql);
@@ -67,6 +70,8 @@
 
 
 		function deleteUser($id){
+		$conn = mysqli_connect("database","root","root","cogip");
+
 		$id = $_GET["id"];
 		$sql = "DELETE FROM contacts WHERE  id = ' $id' ";
 		$result = mysqli_query($conn,$sql);

@@ -1,5 +1,4 @@
 <?php
-require('../models/connection.php');
 require('../models/database.php');
 require('../models/contact_DB.php');
 require('../models/entreprise_DB.php');
@@ -42,20 +41,20 @@ function check_Unique_Username($username){
 //################################### USERTYPE ###:w#################################"
 
 
-//function user(){
-//};
+function user(){
+};
 
 
-//function superUser(){
+function btn(){
 
-//require('../views/page_Welcome.php');
-
-//$btn = '<div class="row">
-//					<div class="col-10 offset-1 buttonbox">
-//						<button type="button" class="btn newContact">New Contact</button>
-//						<button type="button" class="btn newInvoice">New Invoice</button>
-//						<button type="button" class="btn newCompagny">New Compagny</button>';};
-
+if($_SESSION["usertype"] == "superuser"){
+echo	$btn = '<div class="row">
+					<div class="col-10 offset-1 buttonbox">
+						<button type="button" class="btn newContact">New Contact</button>
+						<button type="button" class="btn newInvoice">New Invoice</button>
+						<button type="button" class="btn newCompagny">New Compagny</button> </div> </div>';
+	}
+}
 
 //################################ add user  #################################################
 
@@ -65,7 +64,7 @@ $createUsertype = $_POST["usertype"];
 $btncreateUser = $_POST['creatUser'];
 
 if(isset($btncreateUser)){
-createUser("$createUsername","$createPassword","$Usertype");
+createUser("$createUsername","$createPassword","$createUsertype");
 echo "<p>OK </p>";
 }
 

@@ -9,15 +9,17 @@ require("controleur.php");
 if ($_SERVER['REQUEST_METHOD']=="POST"){
 	if (isset($username) and isset($password)) {
 		// recupére les elements du formulair page login
+		$conn = mysqli_connect("database","root","root","cogip");
 		$sql = "SELECT password, name FROM login WHERE name = '$username';";
 		$result = mysqli_query($conn,$sql);
 		$row=mysqli_fetch_assoc($result);
 	
-	if ($username == $row['name'] ){
+	if (password_verify($password,$row['password'])){
 	session_start();
 			$_SESSION['name'] = $row['name'];
 			$_SESSION['logged'] = true;
-	header("../views/page_Welcome.php");		
+			$_SESSION['usertype'] = $row['usertype'];
+			header('location:page_Welcome.php');
 	}
 	}
 }

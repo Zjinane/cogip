@@ -1,6 +1,5 @@
 <?php
 
-require("connection.php");
 	//	// Fonction de menu déroulant pour le choix de pays dans la page contact
 		
 	//	$sql= "SELECT name FROM compagnies";
@@ -8,13 +7,10 @@ require("connection.php");
 	//	foreach
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
-
 		//creer un contact
-
 		function createContac($firstname,$lastname,$email,$type){
-	
+		$conn = mysqli_connect("database","root","root","cogip");
 		//insertion data dans la database
-
 		$sql = "INSERT INTO contacts (firstname,lastname,email,fk_companies) VALUES ('$firstname', '$lastname', '$email',$type)";
 		if (mysqli_query($conn, $sql)) {
 			echo "New record created successfully";
@@ -29,7 +25,8 @@ require("connection.php");
 
 		//permets de lire tous les contacts et de les afficher
 		function readAllContact(){
-		$sql = "SELECT firstname, lastname, email  FROM contacts";
+		$conn = mysqli_connect("database","root","root","cogip");
+$sql = "SELECT firstname, lastname, email  FROM contacts";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
@@ -46,6 +43,7 @@ require("connection.php");
 
 		//lire un contact 
 		function readContact($firstname, $lastname){
+		$conn = mysqli_connect("database","root","root","cogip");
 		$sql = "SELECT firstname, lastname, email  FROM contacts WHERE firstname = '$firstname' && lastname = '$lastname'";
 		$result = mysqli_query($conn, $sql);
 
@@ -62,6 +60,7 @@ require("connection.php");
 
 		//modifie un contact 
 		function upDateContact($firstname,$lastname,$email,$fk,$id){
+		$conn = mysqli_connect("database","root","root","cogip");
 		//$id = $_GET["id"];
 		$sql ="UPDATE contacts SET firstname ='$firstname', lastname='$lastname', email ='$email', fk_companies ='$fk' WHERE id = '$id' " ;
 		$result = mysqli_query($conn, $sql);
@@ -135,7 +134,7 @@ require("connection.php");
 
 		//supprimer une instance ( supprimer une row de la DB)
 		function deleteContact($firstname, $lastname){
-
+		$conn = mysqli_connect("database","root","root","cogip");
 		$sql = "DELETE FROM contacts WHERE  firstname = '" . $firstname . "' && lastname = '" . $lastname. "' limit 1 ";
 		$result = mysqli_query($conn,$sql);
 		return $result;

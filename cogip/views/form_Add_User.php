@@ -35,12 +35,12 @@
 					<span class="error"><?php echo $gender_err;?></span>
 					</div>
 					<div class="gender col-md-3 col-12">	
-						<label for="male">User</label>
-						<input  type="radio" name="usertype" id="male" value="Male"   alt="Choose that if you are a man"> 
+						<label for="user">User</label>
+						<input  type="radio" name="usertype" id="user" value="user"> 
 					</div>		
 					<div class="gender col-md-3 col-12">				
-						<label for="female">SuperUser</label>
-						<input type="radio" name="usertype" id="female" value="Female"   alt="Choose that if you are a woman"> </p>
+						<label for="superuser">SuperUser</label>
+						<input type="radio" name="usertype" id="superuser" value="superuser"> </p>
 					</div>	
 				
 			</div>
