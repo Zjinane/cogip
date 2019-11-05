@@ -74,55 +74,7 @@
 		
 		<!-- MAIN -->
 		<main>
-
-			<div class="container">
-				<div class="row">
-					<div class="form rounded-lg col-10 offset-1">
-					
-						<form method="post" action="" autocomplete="on" id="form">
-
-							<!-- [1] ROW -->
-							<div class="row">
-								<div class="username col-md-6 col-12">
-									<!-- 💬 username -->
-									<label for="formUsername">Username:</label>
-									<input  class="form-control shadow p-1" type="text" size="20" name="username" id="formUsername" alt="Your username input"  placeholder="Type your username here" value="<?php echo $username ?>"  />
-									<span class="error"><?php echo $username_err;?></span>
-								</div>
-
-								<div class="password col-md-6 col-12">
-                                    <!-- 💬 Password -->
-                                    <label for="formPassword">Password:</label>
-                                    <input  class="form-control shadow p-1" type="password" name="password" id="formPassword" placeholder="Type your password here" value="<?php echo $password ?>"   alt="Your password input"/>
-                                    <span class="error"><?php echo $password_err;?></span>
-                                </div>
-							</div>
-
-							<!-- [2] ROW -->
-							<div class="row">
-								<div class="usertype col-md-6 col-12">
-									<!-- 💬 Email -->
-									<label for="formUsertype">User type:</label>
-									<input  class="form-control shadow p-1" type="text" name="usertype" id="formUsertype" alt="Your user type input" placeholder="Type your usertype here" value="<?php echo $usertype ?>"  />
-									<span class="error"><?php echo $usertype_err;?></span>
-								</div>
-							</div>
-									
-							<!-- [3] ROW -->
-							<div class="container-fluid d-flex justify-content-center">
-								<div class="row">
-									<div class="col-10 offset-1 buttonbox">
-										<button type="button" class="btn reset">Reset</button>
-										<button type="button" class="btn submit">Submit</button>
-									</div>
-								</div>
-							</div>
-									
-						</form>
-					</div>
-				</div>
-			</div>
-
+			<?php include 'bloc_Navbar.php' ?>
 		</main>
 
 		<!-- ASIDE -->
