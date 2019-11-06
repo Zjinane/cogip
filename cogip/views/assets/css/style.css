@@ -255,11 +255,11 @@ form label {
   font-size: 12pt;
 }
 
-.table-conpagnies table {
+.table-companies table {
   border: 3px solid #361c0b;
 }
 
-.table-conpagnies th {
+.table-companies th {
   background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
   color: whitesmoke;
   background-color: white;
@@ -272,7 +272,7 @@ form label {
   font-size: 16pt;
 }
 
-.table-conpagnies td {
+.table-companies td {
   background-color: whitesmoke;
   padding: 0.5rem;
   border: 1px solid #361c0b;
