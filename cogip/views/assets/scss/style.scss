@@ -104,9 +104,6 @@ form {
         text-align: left;
         font-size: 25pt;
     }
-    .jumbotron-picture {
-
-    }
 }
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 // * Header 
@@ -244,6 +241,30 @@ form {
 // * Tables
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 .table-contacts {
+    table {
+        border: 3px solid $borderColor;
+    }
+    th {
+        background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
+        color: whitesmoke;
+        background-color: white;
+        background-repeat: repeat;
+        background-size: auto;
+        background-position: center;
+        padding: 1rem;
+        border: 2px solid $borderColor;
+        text-align: center;
+        font-size: 16pt;
+    }
+    td {
+        background-color: whitesmoke;
+        padding: 0.5rem;
+        border: 1px solid $borderColor;
+        text-align: left;
+        font-size: 12pt;
+    }
+}
+.table-conpagnies {
     table {
         border: 3px solid $borderColor;
     }
