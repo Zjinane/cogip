@@ -27,7 +27,7 @@ function readAllEntrepriseClient(){
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php'>XXX</a></td><td><a href='XXXX'>XXXX</a></td><td><a href='xxx'>XXX</a></td></tr>";
 				}
 		}else{
 			echo "0 results";
@@ -41,12 +41,12 @@ function readAllEntrepriseClient(){
 function readAllEntreprisePro(){
 	$conn = mysqli_connect("database","root","root","cogip");
 
-		$sql = "SELECT name,vat,country  FROM companies WHERE fk_types = 2";
+		$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 2";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'>XXX</a></td><td><a href='XXXX'>XXXX</a></td><td><a href='xxx'>XXX</a></td></tr>";
 				}
 		}else{
 			echo "0 results";
@@ -63,20 +63,31 @@ function readAllEntreprisePro(){
 
 // afficher une entreprise (Lire une entreprise)
 
-		function readEntreprise($name){
-	$conn = mysqli_connect("database","root","root","cogip");
+		function readEntreprise(){
+		$id = $_GET['id'];
+		$conn = mysqli_connect("database","root","root","cogip");
 
-$sql = "SELECT name,vat,country  FROM companies WHERE name = '$name'";
+		$sql = "SELECT name,vat,type  FROM companies INNER JOIN types ON companies.fk_types = types.id WHERE companies.id = '$id'";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "name is   :  " . $row["name"]. "   vat is  : " . $row["vat"]. "country is  : " .$row["coutry"]. "<br>";
+				echo " <h1> " . $row["name"]. "</h1><br><p> VAT : " . $row["vat"]."<br>" . $row["type"] . "<br>";
 				}
 			}else{
 				echo "0 results";
 			}
 };
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+
+
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+
+/*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
+
+
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 //mettre/modifier les infos de l'entreprise

@@ -96,10 +96,6 @@ require("../controlers/controleur.php");
                                 <th>Delete</th>
 							</tr>
 							<?php readAllEntrepriseClient();?>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-							</tr>
 						</table>
 					</div>
 				</div>
@@ -119,10 +115,6 @@ require("../controlers/controleur.php");
                                 <th>Delete</th>
 							</tr>
 							<?php readAllEntreprisePro();?>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-							</tr>
 						</table>
 					</div>
 				</div>
