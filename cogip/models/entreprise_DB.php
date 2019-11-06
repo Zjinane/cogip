@@ -12,7 +12,7 @@ function createEntreprise($name,$vat,$country,$fk_types){
 		$result = mysqli_query($conn, $sql);
 		return $result;
 		};
-//createEntreprise("Biscuit petit beure","F12341","Bali","1");
+createEntreprise("Biscuit petit beure","F12341","Bali","1");
 
 
 
@@ -46,7 +46,7 @@ function readAllEntreprisePro(){
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'>XXX</a></td><td><a href='XXXX'>XXXX</a></td><td><a href='xxx'>XXX</a></td></tr>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='xxx'><i class='fa fa-trash-o' aria-hidden='true'>XXXXX</i></a></td></tr>";
 				}
 		}else{
 			echo "0 results";
@@ -91,11 +91,10 @@ function readAllEntreprisePro(){
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 //mettre/modifier les infos de l'entreprise
-	function upDateEntreprise($name,$vat,$country,$fk_types,$id){
+	function upDateEntreprise($name,$vat,$country,$fk_types){
 	$conn = mysqli_connect("database","root","root","cogip");
-
-//$id = $_GET["id"];
-		$sql ="UPDATE companies SET name ='$name', vat ='$vat', country ='$country', fk_types ='$fk_types'  WHERE id = '$id' " ;
+	$id = $_GET["id"];
+	$sql ="UPDATE companies SET name ='$name', vat ='$vat', country ='$country', fk_types ='$fk_types'  WHERE id = '$id' " ;
 		$result = mysqli_query($conn, $sql);
 			return $result;
 };

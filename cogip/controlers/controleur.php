@@ -85,5 +85,71 @@ createUser("$createUsername","$createPassword","$createUsertype");
 echo "<p>Ok User register </p>";
 }
 
-//##########################################    #################################################
+//##########################################   read All Contact from companies#################################################
+
+function readAllContactCompanies(){
+	$id = $_GET['id'];
+	$conn = mysqli_connect("database","root","root","cogip");
+	$sql = "SELECT firstname,lastname,email  FROM contacts  WHERE fk_companies = '$id'";
+
+$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td> " . $row["firstname"]. $row["lastname"]. " </td><td>" . $row["email"]. "</td></tr>";
+				}
+		}else{
+			echo "0 results";
+		}
+	};
+
+
+
+
+
+function readAllInvoiceCompanies(){
+	$id = $_GET['id'];
+	$conn = mysqli_connect("database","root","root","cogip");
+	$sql = "SELECT num,date,email  FROM invoices INNER JOIN contacts ON invoices.fk_contacts = contacts.id WHERE contacts.fk_companies = '$id'";
+
+$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td> " . $row["num"]."</td><td> ". $row["date"]. " </td><td>" . $row["email"]. "</td></tr>";
+				}
+		}else{
+			echo "0 results";
+		}
+	};
+
+
+#######################Up date compagny ########################
+
+
+function viewupdate(){
+
+	$id = $_GET['id'];
+	$conn = mysqli_connect("database","root","root","cogip");
+
+	$sql = "SELECT name,vat,country  FROM companies  WHERE id = '$id'";
+	$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo " <h1> " . $row["name"]. "</h1><br><p> VAT : " . $row["vat"]."<br>" . $row["country"] . "<br>";
+				}
+			}else{
+				echo "0 results";
+			}
+
+
+}
+
+
+
+
+
+
+
 ?>

@@ -1,6 +1,11 @@
-<?php
+<?PHP
+session_start();
+if (!$_SESSION['logged']){
+	header('location:page_Login.php');
+}
 require("../controlers/controleur.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
@@ -50,7 +55,7 @@ require("../controlers/controleur.php");
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | View the compagny
+				Cogip | Update compagny
 			</title>
 
 	</head>
@@ -69,7 +74,7 @@ require("../controlers/controleur.php");
 			<div class="container-fluid header">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
-						<h3>View the compagny</h3>
+						<h3>Update a compagny</h3>
 					</div>
 				</div>
 			</div>
@@ -77,41 +82,79 @@ require("../controlers/controleur.php");
 		
 		<!-- MAIN -->
 		<main>
-			
-		<div class="vattype col-4"><?php readEntreprise();?></div>
-            <div class="container">
-				<div class="row">
-                        <div class="col-10 offset-1 d-flex justify-content-center table-contacts" >
-                            <table>
-                            <caption>Contact person:</caption>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>E-mail</th>
-                                </tr>
-                                <?php readAllContactCompanies();?>
-                            </table>
-                        </div>
-					</div>	
-				</div>
+		<div class="container">
+			<div class="row">
+				<?php 
+			 	viewupdate();
+				?>
+			</div>
+		</div>
 
-				<div class="container">
-					<div class="row">
-                        <div class="col-10 offset-1 d-flex justify-content-center  table-contacts">
-                            <table>
-                            <caption>Invoices:</caption>
-                                <tr>
-                                    <th>Invoice Number</th>
-                                    <th>Date</th>
-                                    <th>Contact Person</th>
-                                </tr>
-                            <?php readAllInvoiceCompanies();?> 
-                            </table>
-						</div>
+			<div class="container">
+				<div class="row">
+					<div class="form rounded-lg col-10 offset-1">
+					
+						<form method="post" action="" autocomplete="on" id="form">
+
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="name col-md-6 col-12">
+									<!-- 💬 Name -->
+									<label for="formName">Name:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="updatename" id="formName" alt="Name of the compagny input"  placeholder="Type the name of the compagny here"/>
+								</div>
+
+								<div class="vat col-md-6 col-12">
+									<!-- 💬 VAT -->
+									<label for="formVat">VAT:</label>
+									<input  class="form-control shadow p-1" type="text" name="updatevat" id="formVat" alt="Vat of the compagny input" placeholder="Type the VAT of the compagny here" value="<?php echo $vat ?>"  />
+								</div>	
+							</div>
+
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="country col-md-6 col-12 ">	
+									<!-- ✳️ Country -->
+									<fieldset>
+										<label>Country:</label>
+											<select name="updatecontry" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+								</div>
+							</div>
+									
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
+							</div>
+									
+						</form>
 					</div>
 				</div>
-            
+			</div>
+
 		</main>
 
+		<!-- ASIDE -->
+		<aside>
+
+		</aside>
+
+		<!-- SECTION -->
+		<section>
+				<h2></h2>
+					<p></p>			
+		</section>
+		
+		<!-- FOOTER -->
 		<footer>
 			<?php include 'bloc_Footer.php' ?>	
 		</footer>		

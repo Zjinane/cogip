@@ -31,7 +31,7 @@ $sql = "SELECT firstname, lastname, email  FROM contacts";
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<td> " . $row["firstname"]. $row["lastname"]. " </td><td>" . $row["email"]. "</td>";
+				echo "<tr><td> " . $row["firstname"]. $row["lastname"]. " </td><td>" . $row["email"]. "</td></tr>";
 				}
 		}else{
 			echo "0 results";
