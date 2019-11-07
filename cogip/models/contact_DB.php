@@ -24,19 +24,19 @@
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 		//permets de lire tous les contacts et de les afficher
-		function readAllContact(){
-		$conn = mysqli_connect("database","root","root","cogip");
-$sql = "SELECT firstname, lastname, email  FROM contacts";
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) > 0) {
-			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td> " . $row["firstname"]. $row["lastname"]. " </td><td>" . $row["email"]. "</td></tr>";
+	function readAllContact(){
+		$id = $_GET['id'];
+			$sql = "SELECT firstname,lastname,email,name FROM contacts INNER JOIN companies ON  contacts.fk_companies = companies.id ";
+			$result = mysqli_query($conn, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["firstname"]. $row["lastname"] ."</td><td>" . $row["email"]."</td><td>" .$row["name"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Company.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
 				}
 		}else{
 			echo "0 results";
 		}
-	};
+
+};
 
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
