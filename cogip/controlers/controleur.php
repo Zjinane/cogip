@@ -127,7 +127,7 @@ $result = mysqli_query($conn, $sql);
 #######################Up date compagny ########################
 
 
-function viewupdate(){
+function viewUpDateCompanies(){
 
 	$id = $_GET['id'];
 	$conn = mysqli_connect("database","root","root","cogip");
@@ -137,13 +137,23 @@ function viewupdate(){
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo " <h1> " . $row["name"]. "</h1><br><p> VAT : " . $row["vat"]."<br>" . $row["country"] . "<br>";
+				echo "  Companies : " . $row["name"]. " <br>  V.A.T  : " . $row["vat"]." <br> Country : " . $row["country"] . "<br>";
 				}
 			}else{
 				echo "0 results";
 			}
 
 
+}
+
+$updatename = $_POST['updatename'];
+$updatevat = $_POST['updatevat'];
+$updatecontry = $_POST['updatecontry'];
+$btnupdate = $_POST['btnupdate'];
+
+if(isset($btnupdate)){
+upDateEntreprise("$updatename","$updatevat","$updatecontry");
+echo "Update done";
 }
 
 

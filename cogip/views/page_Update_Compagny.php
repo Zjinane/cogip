@@ -85,7 +85,7 @@ require("../controlers/controleur.php");
 		<div class="container">
 			<div class="row">
 				<?php 
-			 	viewupdate();
+			 	viewUpDateCompanies();
 				?>
 			</div>
 		</div>
@@ -131,7 +131,7 @@ require("../controlers/controleur.php");
 								<div class="row">
 									<div class="col-10 offset-1 buttonbox">
 										<button type="button" class="btn reset">Reset</button>
-										<button type="button" class="btn submit">Submit</button>
+										<button name="btnupdate" type="submit" class="btn submit">Submit</button>
 									</div>
 								</div>
 							</div>
