@@ -4,7 +4,7 @@
     <nav class="navbar navbar-dark bg-dark col-12">
 
       <!-- Navbar brand + Navbar logo -->
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="page_Welcome.php">
         <div class="navlogo d-flex justify-content-center">
           <img src="assets/img/logo.png" ><p>Cogip</p>
         </div>
