@@ -1,3 +1,10 @@
+<?PHP
+session_start();
+if (!$_SESSION['logged']){
+	header('location:page_Login.php');
+}
+require("../controlers/controleur.php");
+?>
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
@@ -86,15 +93,13 @@
 								<div class="firstname col-md-6 col-12">
 									<!-- 💬 firstname -->
 									<label for="formFirstname">Firstname:</label>
-									<input  class="form-control shadow p-1" type="text" size="20" name="firstname" id="formFirstname" alt="Your firstname input"  placeholder="Type your firstname here" value="<?php echo $firstname ?>"  />
-									<span class="error"><?php echo $firstname_err;?></span>
+									<input  class="form-control shadow p-1" type="text" size="20" name="firstname" id="formFirstname" alt="Your firstname input"  placeholder="Type your firstname here" />
 								</div>
 
 								<div class="lastname col-md-6 col-12">
 									<!-- 💬 lastname -->
 									<label for="formLastname">Lastname:</label>
-									<input  class="form-control shadow p-1" type="text" name="lastname" id="formLastname" alt="Your lastname input" placeholder="Type your lastame here" value="<?php echo $lastname ?>"  />
-									<span class="error"><?php echo $lastname_err;?></span>
+									<input  class="form-control shadow p-1" type="text" name="lastname" id="formLastname" alt="Your lastname input" placeholder="Type your lastame here" />
 								</div>	
 							</div>
 
@@ -103,8 +108,7 @@
 								<div class="email col-md-6 col-12">
 									<!-- 💬 Email -->
 									<label for="formEmail">E-mail:</label>
-									<input  class="form-control shadow p-1" type="text" name="email" id="formEmail" alt="Your email input" placeholder="email@example.com" value="<?php echo $email ?>"  />
-									<span class="error"><?php echo $email_err;?></span>
+									<input  class="form-control shadow p-1" type="text" name="email" id="formEmail" alt="Your email input" placeholder="email@example.com"/>
 								</div>
 
 								<div class="compagny col-md-6 col-12 ">	
@@ -117,7 +121,6 @@
 												?>
 											</select>
 									</fieldset>
-									<span class="error"><?php echo $compagny_err;?></span>
 								</div>
 							</div>
 									

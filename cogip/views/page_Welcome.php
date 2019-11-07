@@ -5,7 +5,6 @@ if (!$_SESSION['logged']){
 }
 require("../controlers/controleur.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- TO NAVIGATOR | INVISIBLE -->
