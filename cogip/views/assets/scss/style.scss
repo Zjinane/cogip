@@ -274,6 +274,9 @@ form {
         font-size: 12pt;
         padding: 0.5rem;
     }
+    tr:nth-of-type(odd) {
+        background-color:rgb(169, 169, 169);
+      }
 }
 
 .table-break {
