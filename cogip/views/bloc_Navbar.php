@@ -22,7 +22,7 @@
 
           <!-- HOME -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php" rel="noreferrer">Home<i class="fa fa-home" aria-hidden="true"></i></a>
+            <a class="nav-link" href="page_Welcome.php" rel="noreferrer">Home<i class="fa fa-home" aria-hidden="true"></i></a>
           </li>
 
           <!-- CONNEXION -->
