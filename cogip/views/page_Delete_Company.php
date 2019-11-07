@@ -94,9 +94,13 @@ require("../controlers/controleur.php");
 				<div class="row">
 					<div class="rounded-lg col-10 offset-1">
 
-                        <?php ?>
-
-                        <p>Had been deleted!</p>
+                        <?php 
+	$btnCD = $_POST['btnCD'];
+	deleteEntreprise($btnCD);
+?>
+					<form method="post">
+                        <button formmethod="post" name="btnCD" class="btn btn-danger" type="submit">   Delete this company   </button>
+					</form>
 					</div>
 				</div>
 			</div>

@@ -21,13 +21,11 @@ createEntreprise("Biscuit petit beure","F12341","Bali","1");
 //afficher les entreprises ( lire les entreprises)
 function readAllEntrepriseClient(){
 	$conn = mysqli_connect("database","root","root","cogip");
-
-		$sql = "SELECT name,vat,country  FROM companies WHERE fk_types = 1";
-		$result = mysqli_query($conn, $sql);
-
+	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 1";
+	$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php'>XXX</a></td><td><a href='XXXX'>XXXX</a></td><td><a href='xxx'>XXX</a></td></tr>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Company.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
 				}
 		}else{
 			echo "0 results";
@@ -37,16 +35,16 @@ function readAllEntrepriseClient(){
 
 
 
+
+
 //afficher les entreprises ( lire les entreprises)
 function readAllEntreprisePro(){
 	$conn = mysqli_connect("database","root","root","cogip");
-
-		$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 2";
-		$result = mysqli_query($conn, $sql);
-
+	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 2";
+	$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Company.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
 				}
 		}else{
 			echo "0 results";
@@ -95,7 +93,7 @@ function readAllEntreprisePro(){
 	$conn = mysqli_connect("database","root","root","cogip");
 	$id = $_GET["id"];
 	$sql ="UPDATE companies SET name ='$name', vat ='$vat', country ='$country' WHERE id = '$id' " ;
-		$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($conn, $sql);
 			return $result;
 };
 
@@ -107,12 +105,16 @@ function readAllEntreprisePro(){
 //supprimer une instance ( supprimer une row de la DB)
 
 
-	function deleteEntreprise($id){
-	$conn = mysqli_connect("database","root","root","cogip");
+	function deleteEntreprise($btn){
+	$id = $_GET["id"];
+	if(isset($btn)){
 
-$id = $_GET["id"];
+		$conn = mysqli_connect("database","root","root","cogip");
 		$sql = "DELETE FROM companies WHERE  id = ' $id ' ";
 		$result = mysqli_query($conn,$sql);
-		return $result;
+
+		echo "Companie is Delete";
+} 
+	return $result;
 };
 ?>
