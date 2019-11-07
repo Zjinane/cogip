@@ -1,6 +1,7 @@
 <?PHP
 session_start();
 if (!$_SESSION['logged']){
+session_destroy();
 	header('location:page_Login.php');
 }
 require("../controlers/controleur.php");

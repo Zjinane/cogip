@@ -1,4 +1,4 @@
-<?PHP
+HP
 session_start();
 if (!$_SESSION['logged']){
 	header('location:page_Login.php');

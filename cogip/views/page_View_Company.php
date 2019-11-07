@@ -1,4 +1,8 @@
-<?php
+<?PHP
+session_start();
+if (!$_SESSION['logged']){
+	header('location:page_Login.php');
+}
 require("../controlers/controleur.php");
 ?>
 <!DOCTYPE html>
