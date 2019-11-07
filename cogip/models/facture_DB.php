@@ -37,15 +37,17 @@ function connectionDB(){
 //afficher des factures ( lire des factures)
 function readAllInvoice(){
 
-		$sql = "SELECT num,date,fk_contacts  FROM invoices";
+		$sql = "SELECT  num,date,name,type FROM invoices,contacts, companies,types ";
+
 		$result = mysqli_query(connectionDB(), $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "num invoice is   :  " . $row["num"]. "  date invoice is : ". $row["date"] ." contact invoice is : ". $row["fk_contacts"]. "<br>";
+				echo "<tr><td>" . $row["num"]. "</td><td>" . $row["date"]."</td><td>" .$row["name"]."</td><td>" . $row["type"] . "</td><td><a href='../views/page_View_Invoice.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Invoice.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Invoice.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
 				}
 		}else{
 			echo "0 results";
+			
 		}
 };
 

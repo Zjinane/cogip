@@ -95,16 +95,8 @@ require("../controlers/controleur.php");
                                 <th>Update</th>
                                 <th>Delete</th>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-							</tr>
-						</table>
+							<?php readAllInvoice(); ?>
+							</table>
 					</div>
 				</div>
 			</div>
