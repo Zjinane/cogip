@@ -69,7 +69,6 @@ require("../controlers/controleur.php");
 		<!-- HEADER -->
 		<header>	
 			<?php include 'bloc_Navbar.php' ?>
-			<!--<?php include 'bloc_Jumbotron.php' ?> -->
 
 			<div class="container-fluid header">
 				<div class="row">
@@ -142,17 +141,6 @@ require("../controlers/controleur.php");
 			</div>
 
 		</main>
-
-		<!-- ASIDE -->
-		<aside>
-
-		</aside>
-
-		<!-- SECTION -->
-		<section>
-				<h2></h2>
-					<p></p>			
-		</section>
 		
 		<!-- FOOTER -->
 		<footer>

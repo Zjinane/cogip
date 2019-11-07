@@ -65,7 +65,7 @@
 		<!-- HEADER -->
 		<header>	
 			<?php include 'bloc_Navbar.php' ?>
-			<!--<?php include 'bloc_Jumbotron.php' ?> -->
+
 			<div class="container-fluid header">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
