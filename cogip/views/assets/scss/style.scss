@@ -46,6 +46,7 @@ form {
     input {
         .form-control{
         margin-bottom: 0.5rem;
+        padding: 0.5rem;
         }
     }
 }
@@ -253,7 +254,7 @@ form {
         border: 3px solid $borderColor;
     }
     th {
-        background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
+        background-color: rgba(0, 0, 0, 0.938);
         color: whitesmoke;
         background-color: white;
         background-repeat: repeat;
@@ -263,6 +264,7 @@ form {
         border: 2px solid $borderColor;
         text-align: center;
         font-size: 16pt;
+        padding: 1rem;
     }
     td {
         background-color: whitesmoke;
@@ -270,6 +272,7 @@ form {
         border: 1px solid $borderColor;
         text-align: left;
         font-size: 12pt;
+        padding: 0.5rem;
     }
 }
 
