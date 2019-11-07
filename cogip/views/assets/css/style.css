@@ -25,6 +25,7 @@ form label {
 
 form input .form-control {
   margin-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 .navbar {
@@ -242,7 +243,7 @@ form input .form-control {
 }
 
 .table-contacts th {
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
+  background-color: rgba(0, 0, 0, 0.938);
   color: whitesmoke;
   background-color: white;
   background-repeat: repeat;
@@ -252,6 +253,7 @@ form input .form-control {
   border: 2px solid #361c0b;
   text-align: center;
   font-size: 16pt;
+  padding: 1rem;
 }
 
 .table-contacts td {
@@ -260,6 +262,11 @@ form input .form-control {
   border: 1px solid #361c0b;
   text-align: left;
   font-size: 12pt;
+  padding: 0.5rem;
+}
+
+.table-contacts tr:nth-of-type(odd) {
+  background-color: darkgray;
 }
 
 .table-break td {
