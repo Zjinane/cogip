@@ -95,12 +95,16 @@ require("../controlers/controleur.php");
 					<div class="rounded-lg col-10 offset-1">
 
                         <?php 
-	$btnCD = $_POST['btnCD'];
-	deleteEntreprise($btnCD);
-?>
-					<form method="post">
-                        <button formmethod="post" name="btnCD" class="btn btn-danger" type="submit">   Delete this company   </button>
-					</form>
+							$btnCD = $_POST['btnCD'];
+							deleteEntreprise($btnCD);
+						?>
+
+						<div class="form">	
+							<form method="post">
+								<button formmethod="post" name="btnCD" class="btn btn-danger" type="submit">   Delete this company   </button>
+							</form>
+						</div>
+						
 					</div>
 				</div>
 			</div>
