@@ -43,7 +43,13 @@ form {
     label {
         font-size: 16pt;
     }
+    input {
+        .form-control{
+        margin-bottom: 0.5rem;
+        }
+    }
 }
+
 // <$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$>
 // - CLASSES                                                                                                            <$> 
 // <$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$><$>
@@ -77,14 +83,16 @@ form {
 .nav-link {
     font-size: 12pt !important;
     display: flex;
-    justify-content: right;
+    justify-content: right !important;
 }
 .nav-item{
     i {
+        display: flex;
         margin-left: 1rem;
-        align-items: center;
+        align-items: right !important;;
     }
 }
+
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 // * Jumbotron
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -264,30 +272,7 @@ form {
         font-size: 12pt;
     }
 }
-.table-companies {
-    table {
-        border: 3px solid $borderColor;
-    }
-    th {
-        background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/irongrip.png);
-        color: whitesmoke;
-        background-color: white;
-        background-repeat: repeat;
-        background-size: auto;
-        background-position: center;
-        padding: 1rem;
-        border: 2px solid $borderColor;
-        text-align: center;
-        font-size: 16pt;
-    }
-    td {
-        background-color: whitesmoke;
-        padding: 0.5rem;
-        border: 1px solid $borderColor;
-        text-align: left;
-        font-size: 12pt;
-    }
-}
+
 .table-break {
     td {
         border: solid 2px black !important;
