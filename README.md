@@ -15,11 +15,10 @@
 <hr>
 <br>
 
-<figure>
-    <img src="Readme/Structure_MVC_1.png" height="30%" width="15%">
-    <img src="Readme/Structure_MVC_2.png" height="30%" width="15%">
-    <figcaption>structure MVC</figcaption>
-</figure>
+
+<img src="Readme/Structure_MVC_1.png" height="30%" width="15%">
+<img src="Readme/Structure_MVC_2.png" height="30%" width="15%">
+
 
 <h2>💻 Languages used 💻</h2>
 
