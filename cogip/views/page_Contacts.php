@@ -1,6 +1,7 @@
 <?PHP
 session_start();
 if (!$_SESSION['logged']){
+session_destroy();
 	header('location:page_Login.php');
 }
 require("../controlers/controleur.php");
@@ -38,7 +39,70 @@ require("../controlers/controleur.php");
 		<!-- BOOTSTRAP CSS -->
 			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 			rel="stylesheet" 
->
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+			crossorigin="anonymous">
+
+
+		<!-- CSS INSERTION -->
+			<link rel="stylesheet" type="text/css" href="assets\css\style.css">
+
+
+		<!-- FONT AWESOME 4.7 ICONS -->
+			<script src="https://use.fontawesome.com/c5aedf01c1.js"></script>
+
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" href="assets/img/logo.png"/>
+
+		<!-- WEB PAGE TITLE -->
+			<title>
+				Cogip | Contacts
+			</title>
+
+	</head>
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+<!-- TO VISITORS | VISIBLE -->
+	<body>
+	
+		<!-- HEADER -->
+		<header>	
+			<?php include 'bloc_Navbar.php' ?>
+
+			<div class="container-fluid header">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<h3>Contacts</h3>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!-- MAIN -->
+		<main>
+
+		<div class="container">
+				<div class="row">
+					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Email</th>
+                                <th>Compagny</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>
+							<?php readAllContacts(); ?>
+							</table>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<!-- FOOTER -->
 		<footer>
 			<?php include 'bloc_Footer.php' ?>	
 		</footer>		
