@@ -64,9 +64,9 @@ All seeking to bring information requested by a third party via a simple and eff
 <h2>💻 Reviews of Members and Their Works 💻</h2>
 
 <ul>
-    <li><q></q><p><small>Mathieu</small></p></li>
-    <li><q>Cela était interressant de travailler sur ce projet de groupe, Le projet en soit était coriace mais la partie backend m'a appris pas mal de chose.</q><p><small>Jinane</small></p></li>
-    <li><q>Entre phases de stress, fatigue et joie a propos du backend, travailler sur CE projet mais aussi avec mes collegues en "pair coding" était tres enrichissant et m'a fait entre appercevoir ce qu'est de travailler en groupe sur un projet</q><p><small>Jérémy</small></p></li>
+    <li><q></q><p><small> ~Mathieu</small></p></li>
+    <li><q>Cela était interressant de travailler sur ce projet de groupe, Le projet en soit était coriace mais la partie backend m'a appris pas mal de chose.</q><p><small> ~Jinane</small></p></li>
+    <li><q>Entre phases de stress, fatigue et joie a propos du backend, travailler sur CE projet mais aussi avec mes collegues en "pair coding" était tres enrichissant et m'a fait entre appercevoir ce qu'est de travailler en groupe sur un projet</q><p><small> ~Jérémy</small></p></li>
 </ul>
 
 <br>
