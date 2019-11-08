@@ -87,15 +87,12 @@ require("../controlers/controleur.php");
 					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
 						<table>
 							<caption>Clients:</caption>
-							<tr>
-								<th>Name</th>
-								<th>VAT</th>
-                                <th>Contry</th>
-								<th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-							</tr>
-							<?php readAllEntrepriseClient();?>
+						<?php
+						table_A();
+						readAllEntrepriseClient_A();
+						table();
+						readAllEntrepriseClient();
+						?>
 						</table>
 					</div>
 				</div>
@@ -106,15 +103,12 @@ require("../controlers/controleur.php");
 					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
 						<table>
 							<caption>Suppliers:</caption>
-							<tr>
-								<th>Name</th>
-								<th>VAT</th>
-                                <th>Contry</th>
-								<th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-							</tr>
-							<?php readAllEntreprisePro();?>
+						<?php
+						table_A();
+						readAllEntreprisePro_A();
+						table();
+						readAllEntreprisePro();
+						?>
 						</table>
 					</div>
 				</div>

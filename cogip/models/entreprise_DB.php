@@ -18,27 +18,80 @@ createEntreprise("Biscuit petit beure","F12341","Bali","1");
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
+
 //afficher les entreprises ( lire les entreprises)
-function readAllEntrepriseClient(){
+function table_A(){
+	if($_SESSION['usertype'] == "superuser"){
+		echo "	<tr>
+								<th>Name</th>
+								<th>VAT</th>
+                                <th>Contry</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>";
+	}
+}
+
+
+//afficher les entreprises ( lire les entreprises)
+function readAllEntrepriseClient_A(){
+	if($_SESSION['usertype'] == "superuser"){
+
 	$conn = mysqli_connect("database","root","root","cogip");
 	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 1";
 	$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Company.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
+				echo "
+<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><td><a href='../views/page_Update_Compagny.php?id=".$row['id']."'><i class='fa fa-pencil' aria-hidden='true'></i></a></td><td><a href='../views/page_Delete_Company.php?id=".$row['id']."'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>";
+
 				}
 		}else{
 			echo "0 results";
 		}
+}
+};
 
+
+function table(){
+	if($_SESSION['usertype'] == "user"){
+
+		echo "	<tr>
+								<th>Name</th>
+								<th>VAT</th>
+                                <th>Contry</th>
+								<th>View</th>
+							</tr>";
+	}
+
+}
+
+
+function readAllEntrepriseClient(){
+	if($_SESSION['usertype'] == "user"){
+
+	$conn = mysqli_connect("database","root","root","cogip");
+	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 1";
+	$result = mysqli_query($conn, $sql);
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td><";
+
+				}
+		}else{
+			echo "0 results";
+		}
+}
 };
 
 
 
 
-
+//#############################################################################################"
 //afficher les entreprises ( lire les entreprises)
-function readAllEntreprisePro(){
+function readAllEntreprisePro_A(){
+	if($_SESSION['usertype'] == "superuser"){
 	$conn = mysqli_connect("database","root","root","cogip");
 	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 2";
 	$result = mysqli_query($conn, $sql);
@@ -49,8 +102,26 @@ function readAllEntreprisePro(){
 		}else{
 			echo "0 results";
 		}
-
+}
 };
+
+//afficher les entreprises ( lire les entreprises)
+function readAllEntreprisePro(){
+	if($_SESSION['usertype'] == "user"){
+
+	$conn = mysqli_connect("database","root","root","cogip");
+	$sql = "SELECT name,vat,country,id  FROM companies WHERE fk_types = 2";
+	$result = mysqli_query($conn, $sql);
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["name"]. "</td><td>" . $row["vat"]."</td><td>" .$row["country"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td>";
+				}
+		}else{
+			echo "0 results";
+		}
+}
+
+}
 
 
 
