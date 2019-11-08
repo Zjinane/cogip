@@ -213,6 +213,10 @@ form input .form-control {
 .footer {
   color: white;
   background-color: #009460;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer .social-media {
