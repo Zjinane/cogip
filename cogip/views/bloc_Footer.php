@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row footer fixed-bottom" >
+<div class="container-fluid">
+    <div class="row footer" >
 
         <div class="col-md-6 col-12 d-flex justify-content-center align-items-center social-media">
 			<small>Follow us:</small>
