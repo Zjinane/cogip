@@ -14,9 +14,11 @@
 
 <h2>💻 Mockup 💻</h2>
 
-<img src="Readme/Welkom_super_User.png" height="30%" title="welkom super user" width="280"><img src="Readme/Welkom_User.png" height="30%" title="welkom user" width="280">
+<img src="Readme/Welkom_super_User.png" height="30%" title="welkom super user" width="280">
+<img src="Readme/Welkom_User.png" height="30%" title="welkom user" width="280">
 
-<img src="Readme/View_Company_User.png" height="30%" title="view company User" width="280"><img src="Readme/View_Company_Super_User.png" height="30%" title="view company_Super-User" width="280">
+<img src="Readme/View_Company_User.png" height="30%" title="view company User" width="280">
+<img src="Readme/View_Company_Super_User.png" height="30%" title="view company_Super-User" width="280">
 
 <h2>💻 You can see the result here 💻</h2>
 
