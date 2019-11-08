@@ -54,7 +54,7 @@ require("../controlers/controleur.php");
 
 		<!-- WEB PAGE TITLE -->
 			<title>
-				Cogip | New user
+				Cogip | Update an invoice
 			</title>
 
 	</head>
@@ -72,7 +72,7 @@ require("../controlers/controleur.php");
 			<div class="container-fluid header">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
-						<h3>Add a new user</h3>
+						<h3>Update an existing invoice</h3>
 					</div>
 				</div>
 			</div>
@@ -84,71 +84,72 @@ require("../controlers/controleur.php");
 			<div class="container">
 				<div class="row">
 					<div class="form rounded-lg col-10 offset-1">
-
-						<div class="row">
-							<div class="col-12 form-group">
-								<u><h2>New user form:</h2></u>
-							</div>
-						</div>
-
+					
 						<form method="post" action="" autocomplete="on" id="form">
 
-						<!-- [1] ROW -->
-						<div class="row">
-							<div class="username col-md-6 col-12">
-								<!-- 💬 Username -->
-								<label for="formUsername">Username:</label>
-								<input  class="form-control shadow p-1" type="text" size="20" name="usernamereg" id="formUsername" alt="Your username input"  placeholder="Type your Username here" value="<?php echo $creatUsername ?>"  />
-								<span class="error"><?php echo $username_err;?></span>
-							</div>
-
-							<div class="password col-md-6 col-12">
-								<!-- 💬 Password -->
-								<label for="formPassword">Password:</label>
-								<input  class="form-control shadow p-1" type="password" name="passwordreg" id="formPassword" placeholder="Type your password here" value="<?php echo $password ?>"   alt="Your password input"/>
-								<span class="error"><?php echo $password_err;?></span>
-							</div>	
-						</div>
-						
-						<!-- [2] ROW -->
-						<div class="row">
-								<div class="gender col-md-6 col-12">
-									<!-- 🚻 Usertype -->
-									<p>Choose your user type:<br>
-									<span class="error"><?php echo $gender_err;?></span>
+							<!-- [1] ROW -->
+							<div class="row">
+								<div class="num col-md-6 col-12">
+									<!-- 💬 Invoice Num -->
+									<label for="formNum">Invoice Num:</label>
+									<input  class="form-control shadow p-1" type="text" size="20" name="num" id="formNum" alt="New invoice num input"  placeholder="Type the new invoice num here" value="<?php echo $num ?>"  />
+									<span class="error"><?php echo $num_err;?></span>
 								</div>
 
-								<div class="gender col-md-3 col-12">	
-									<label for="user">User</label>
-									<input  type="radio" name="usertype" id="user" value="user"> 
-								</div>		
-
-								<div class="gender col-md-3 col-12">				
-									<label for="superuser">SuperUser</label>
-									<input type="radio" name="usertype" id="superuser" value="superuser"> </p>
+								<div class="ate col-md-6 col-12">
+									<!-- 💬 Date -->
+									<label for="formDate">Date:</label>
+									<input  class="form-control shadow p-1" type="text" name="date" id="formDate" alt="New date input" placeholder="Type the new invoice date here" value="<?php echo $date ?>"  />
+									<span class="error"><?php echo $date_err;?></span>
 								</div>	
-						</div>
-						
-						<!-- [3] ROW -->
-						<div class="row">
-							<div class="col-md-6 d-flex justify-content-center">	
-								<!-- Reset button -->
-								<input class="btn btn-primary" type="reset" value="RESET" onclick="forceReset();">
+							</div>
+							
+							<!-- [2] ROW -->
+							<div class="row">
+								<div class="compagny col-md-6 col-12 ">	
+									<!-- ✳️ Companies -->
+									<fieldset>
+										<label>Compagny:</label>
+											<select name="compagnies" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $compagny_err;?></span>
+								</div>
+
+								<div class="contact col-md-6 col-12 ">	
+									<!-- ✳️ Contact person -->
+									<fieldset>
+										<label>Contact person:</label>
+											<select name="contact" class="form-control shadow p-1">
+												<?php
+													include 'array_Countries.php';
+												?>
+											</select>
+									</fieldset>
+									<span class="error"><?php echo $contact_err;?></span>
+								</div>
 							</div>
 
-							<div class="col-md-6 d-flex justify-content-center">	
-								<!-- Submit button -->
-								<input class="btn btn-primary" type="submit" name="creatUser"  value="SUBMIT">
+							<!-- [3] ROW -->
+							<div class="container-fluid d-flex justify-content-center">
+								<div class="row">
+									<div class="col-10 offset-1 buttonbox">
+										<button type="button" class="btn reset">Reset</button>
+										<button type="button" class="btn submit">Submit</button>
+									</div>
+								</div>
 							</div>
-						</div>
-						
+									
 						</form>
 					</div>
 				</div>
 			</div>
 
 		</main>
-		
+
 		<!-- FOOTER -->
 		<footer>
 			<?php include 'bloc_Footer.php' ?>	
