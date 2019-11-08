@@ -88,9 +88,9 @@ require("../controlers/controleur.php");
 						<table>
 							<?php 
 							table_A_Contact();
-							
-							
+							readAllContact_A();
 							table_Contact();
+							readAllContact();
 							?>
 							</table>
 					</div>

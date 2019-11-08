@@ -24,9 +24,11 @@
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 		//permets de lire tous les contacts et de les afficher
-	function readAllContact(){
+	function readAllContact_A(){
+	if($_SESSION['usertype'] == "superuser"){
+	$conn = mysqli_connect("database","root","root","cogip");
 		$id = $_GET['id'];
-			$sql = "SELECT firstname,lastname,email,name FROM contacts INNER JOIN companies ON  contacts.fk_companies = companies.id ";
+		$sql = "SELECT firstname,lastname,email,name FROM contacts INNER JOIN companies ON  contacts.fk_companies ";
 			$result = mysqli_query($conn, $sql);
 				if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_assoc($result)) {
@@ -35,8 +37,26 @@
 		}else{
 			echo "0 results";
 		}
-
+}
 };
+
+
+	function readAllContact(){
+	if($_SESSION['usertype'] == "user"){
+	$conn = mysqli_connect("database","root","root","cogip");
+		$id = $_GET['id'];
+				$sql = "SELECT firstname,lastname,email,name FROM contacts INNER JOIN companies ON  contacts.fk_companies ";
+			$result = mysqli_query($conn, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["firstname"]. $row["lastname"] ."</td><td>" . $row["email"]."</td><td>" .$row["name"]. "</td><td><a href='../views/page_View_Company.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td>";
+				}
+		}else{
+			echo "0 results";
+		}
+}
+};
+
 
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
