@@ -67,9 +67,9 @@ function Admin_btn(){
 if($_SESSION['usertype'] == "superuser"){
 echo	$btn = '<div class="row">
 					<div class="col-10 offset-1 buttonbox">
-						<button type="button" class="btn newContact">New Contact</button>
-						<button type="button" class="btn newInvoice">New Invoice</button>
-						<button type="button" class="btn newCompagny">New Compagny</button> </div> </div>';
+						<a type="button" href="../views/page_Add_Contact.php" class="btn newContact">New Contact</a>
+						<a type="button" href="../views/page_Add_Invoice.php" class="btn newInvoice">New Invoice</a>
+						<a type="button" href="../views/page_Add_Compagny.php" class="btn newCompagny">New Compagny</a> </div> </div>';
 	}
 }
 
@@ -266,5 +266,18 @@ echo "Update done";
 }
 
 
-############################### log out ###############################
+############################### Bienvenu ###############################
+
+function Bienvenu(){
+	if($_SESSION['usertype'] == "superuser"){
+	$name = $_SESSION['name'];
+	echo "Welcome ".$name ;
+	}else{
+	echo "Welcome";
+	}
+}
+
+
+
+
 ?>

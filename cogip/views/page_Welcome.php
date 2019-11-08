@@ -73,7 +73,7 @@ require("../controlers/controleur.php");
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center header">
-						<h3>Welcome</h3>
+						<h3><?php Bienvenu();?></h3>
 					</div>
 				</div>
 			</div>
