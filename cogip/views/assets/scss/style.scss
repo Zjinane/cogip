@@ -227,6 +227,10 @@ form {
 .footer {
     color:  white;
     background-color: $footerColor;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     .social-media {
         height: 40px;
     }
