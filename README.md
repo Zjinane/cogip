@@ -16,8 +16,12 @@
 <br>
 
 
-<img src="Readme/Structure_MVC_1.png" height="30%" width="15%">
-<img src="Readme/Structure_MVC_2.png" height="30%" width="15%">
+<img src="/Readme/Structure_MVC_1.png" height="30%" width="15%">
+<img src="/Readme/Structure_MVC_2.png" height="30%" width="15%">
+
+<br>
+<hr>
+<br>
 
 
 <h2>💻 Languages used 💻</h2>
