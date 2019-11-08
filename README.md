@@ -76,8 +76,6 @@ Le tout cherchant à amener des informations demandées par un tiers via une int
     <q>Nous avons commencées à établir un plan d'action dès le premier jour, cela en ciblant les points forts de chacuns et les faiblesses. <br>Une fois identifié(e)s chacuns travaillaientt indépendamanet tout en communiquant au moindre probleme qui nous resistaient, aussi lors d'un puch sur notre repository Github ou même lors une pause pour faire un check selon chacuns. <br>La plus grosse difficulté pour nous trois était de comprendre le systeme "C.R.U.D" mais également la structure "MVC" ( M-odels, V-iew, C-ontroler). <br>Ensuite le projet c'est bien passé pour le reste en nous fixant comme dès le début des objectifs à atteindre par jour où selon les besoins urgents !</q>
 </P>
 
-<h2>💻 Liens 💻</h2>
-
 
 <br>
 <hr>
