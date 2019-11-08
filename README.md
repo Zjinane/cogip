@@ -15,12 +15,10 @@
 <hr>
 <br>
 
-<p align="left">
-<img src="Readme/Structure_MVC_1.png" height="30%" width="15%">
-</p>
-<p align="center">
-<img src="Readme/Structure_MVC_2.png" height="30%" width="15%">
-</p>
+
+<img src="Readme/Structure_MVC_1.png" height="30%" width="280"><img src="Readme/Structure_MVC_2.png" height="30%" width="280">
+
+
 <br>
 <hr>
 <br>
