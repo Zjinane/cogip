@@ -94,10 +94,11 @@ require("../controlers/controleur.php");
 		<div class="container">
 			<div class="row">
 				<div class="col-10 offset-1 databox">
-					<p>Here is the databox</p>
-					<h6>Latest invoices:</h6>
-					<h6>Latest contacts:</h6>
-					<h6>Latest companies:</h6>
+					<div><?php  
+					last_Invoice();
+					last_company();
+					last_contact();
+					?></div>
 				</div>
 			</div>
 		</div>

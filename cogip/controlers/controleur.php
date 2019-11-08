@@ -276,8 +276,87 @@ function Bienvenu(){
 	echo "Welcome";
 	}
 }
+#############################Affichage Superuser ########################################
+
+//la liste des 5 dernières factures, classées par date
+//la liste des 5 dernières personnes encodées dans la base de données
+//la liste des 5 dernières entreprises encodées dans la base de données
+//un lien vers la page des fournisseurs
+//un lien vers la page du client
+
+function last_Invoice(){
+	if($_SESSION['usertype'] == "superuser"){
+		$conn = mysqli_connect("database","root","root","cogip");
 
 
+		$sql = "SELECT  * FROM invoices ORDER BY date DESC limite = 5 ";
 
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+		$row = mysqli_fetch_assoc($result);
+				echo "Date invoice  : ".$row["date"]. "  Num invoice  :  " .$row["num"]  ;
+				
+		}else{
+			echo "0 results";
+			
+		}
+}else{
+
+echo " COGIP  ";
+
+}
+}
+
+
+function last_contact(){
+	if($_SESSION['usertype'] == "superuser"){
+		$conn = mysqli_connect("database","root","root","cogip");
+
+
+		$sql = "SELECT  * FROM contacts ORDER BY date DESC limite = 5 ";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+		$row = mysqli_fetch_assoc($result);
+				echo "Name : ". $row["firstname"] . $row["lastname"]. "  Email  :  " .$row["email"]  ;
+				
+		}else{
+			echo "0 results";
+			
+		}
+}else{
+
+echo " for ";
+
+}
+
+}
+
+function last_company(){
+	if($_SESSION['usertype'] == "superuser"){
+		$conn = mysqli_connect("database","root","root","cogip");
+
+		$sql = "SELECT  * FROM companies ORDER BY date DESC limite = 5 ";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+		$row = mysqli_fetch_assoc($result);
+				echo "Name  : ".$row["name"]. "  VAT  :  " .$row["vat"] ."  Country : " .$row["country"] ;
+				
+		}else{
+			echo "0 results";
+			
+		}
+}else{
+
+echo " life ";
+
+}
+
+
+}
 
 ?>
