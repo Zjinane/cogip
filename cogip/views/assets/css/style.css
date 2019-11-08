@@ -50,6 +50,18 @@ form input .form-control {
   margin-right: 0.5rem;
 }
 
+.navlogo img:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
 .nav-brand p {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -213,10 +225,7 @@ form input .form-control {
 .footer {
   color: white;
   background-color: #009460;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  position: -webkit-sticky;
 }
 
 .footer .social-media {
@@ -240,6 +249,7 @@ form input .form-control {
 
 .footer i:hover {
   color: #4a2611;
+  font-size: 35px;
 }
 
 .table-contacts table {
