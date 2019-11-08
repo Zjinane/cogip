@@ -16,8 +16,8 @@
 <br>
 
 <figure>
-    <img src="../cogip/views/assets/img/Readme/Structure_MVC_1.png" height="30%" width="15%">
-    <img src="../cogip/views/assets/img/Readme/Structure_MVC_2.png" height="30%" width="15%">
+    <img src="../Readme/Structure_MVC_1.png" height="30%" width="15%">
+    <img src="../Readme/Structure_MVC_2.png" height="30%" width="15%">
     <figcaption>structure MVC</figcaption>
 </figure>
 
