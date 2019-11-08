@@ -20,21 +20,6 @@ createEntreprise("Biscuit petit beure","F12341","Bali","1");
 
 
 //afficher les entreprises ( lire les entreprises)
-function table_A(){
-	if($_SESSION['usertype'] == "superuser"){
-		echo "	<tr>
-								<th>Name</th>
-								<th>VAT</th>
-                                <th>Contry</th>
-								<th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-							</tr>";
-	}
-}
-
-
-//afficher les entreprises ( lire les entreprises)
 function readAllEntrepriseClient_A(){
 	if($_SESSION['usertype'] == "superuser"){
 
@@ -52,20 +37,6 @@ function readAllEntrepriseClient_A(){
 		}
 }
 };
-
-
-function table(){
-	if($_SESSION['usertype'] == "user"){
-
-		echo "	<tr>
-								<th>Name</th>
-								<th>VAT</th>
-                                <th>Contry</th>
-								<th>View</th>
-							</tr>";
-	}
-
-}
 
 
 function readAllEntrepriseClient(){

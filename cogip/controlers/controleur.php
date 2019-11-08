@@ -73,6 +73,115 @@ echo	$btn = '<div class="row">
 	}
 }
 
+
+//afficher View btn user
+function table(){
+	if($_SESSION['usertype'] == "user"){
+
+		echo "<tr>
+								<th>Name</th>
+								<th>VAT</th>
+                                <th>Contry</th>
+								<th>View</th>
+							</tr>";
+	}
+
+}
+
+
+
+
+
+//afficher les View/Update/Delete btn superuser
+function table_A(){
+	if($_SESSION['usertype'] == "superuser"){
+		echo "	<tr>
+								<th>Name</th>
+								<th>VAT</th>
+                                <th>Contry</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>";
+	}
+};
+
+
+
+
+
+//afficher les View/Update/Delete btn superuser
+function table_A_Invoice(){
+	if($_SESSION['usertype'] == "superuser"){
+		echo "	<tr>
+								<th>Num</th>
+								<th>Date</th>
+                                <th>Name</th>
+								<th>Type</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>";
+	}
+};
+
+
+
+//afficher les View/Update/Delete btn superuser
+function table_Invoice(){
+	if($_SESSION['usertype'] == "user"){
+		echo "	<tr>
+								<th>Num</th>
+								<th>Date</th>
+                                <th>Name</th>
+								<th>Type</th>
+								<th>View</th>
+							</tr>";
+	}
+};
+
+
+
+
+
+
+
+
+//afficher les View/Update/Delete btn superuser
+function table_A_Contact(){
+	if($_SESSION['usertype'] == "superuser"){
+		echo "	<tr>
+								<th>Name</th>
+								<th>Email</th>
+                                <th>Compagny</th>
+								<th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+							</tr>";
+	}
+};
+
+
+
+//afficher les View/Update/Delete btn superuser
+function table_Contact(){
+	if($_SESSION['usertype'] == "user"){
+		echo "	<tr>
+								<th>Name</th>
+								<th>Email</th>
+                                <th>Compagny</th>
+								<th>View</th>
+							</tr>";
+	}
+};
+
+
+
+
+
+
+
+
 //################################ add user  #################################################
 
 $createUsername = sanitizeInput($_POST["usernamereg"]);
