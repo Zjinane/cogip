@@ -16,7 +16,8 @@
 <br>
 
 
-<img src="Readme/Structure_MVC_1.png" height="30%" width="280"><img src="Readme/Structure_MVC_2.png" height="30%" width="280">
+<img src="Readme/Structure_MVC_1.png" height="30%" width="280">
+<img src="Readme/Structure_MVC_2.png" height="30%" width="280">
 
 
 <br>
