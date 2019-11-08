@@ -20,7 +20,7 @@
 <img src="Readme/View_Company_User.png" height="30%" title="view company User" width="280">
 <img src="Readme/View_Company_Super_User.png" height="30%" title="view company_Super-User" width="280">
 
-<h2>💻 You can see the result here 💻</h2>
+<h2>💻 Vous pouvez voir le resultat ici 💻</h2>
 
 <p><a href="###" title="Link of project" >Click here </a></p>
 
@@ -28,7 +28,7 @@
 <hr>
 <br>
 
-<h2>💻 MVC structure file 💻</h2>
+<h2>💻 Structure du fichier MVC  💻</h2>
 
 <img src="Readme/Structure_MVC_1.png" height="30%" width="280">
 <img src="Readme/Structure_MVC_2.png" height="30%" width="280">
