@@ -11,9 +11,23 @@
 <p align="center"><a href="https://github.com/Zjinane" target="_blank">Zjinane 👩‍💻 </a> - <a href="https://github.com/Shaunyx" target="_blank">Jeremy 👨‍💻</a> - <a href="https://github.com/MathieuKruk" target="_blank">Mathieu 👨‍💻</a></p>
 
 
+
+<h2>💻 Mockup 💻</h2>
+
+<img src="###" height="30%" title="welkom with navbar" width="280"><img src="" height="30%" title="welkom with navbar super user" width="280">
+
+<img src="###" height="30%" title="Login" width="280">
+<img src="###" height="30%" title="company_User" width="280"><img src="" height="30%" title="company_Super-User" width="280">
+
+<h2>💻 You can see the result here 💻</h2>
+
+<p><a href="###" title="Link of project" >Click here </a></p>
+
 <br>
 <hr>
 <br>
+
+<h2>💻 MVC structure file 💻</h2>
 
 <img src="Readme/Structure_MVC_1.png" height="30%" width="280">
 <img src="Readme/Structure_MVC_2.png" height="30%" width="280">
@@ -50,9 +64,9 @@ All seeking to bring information requested by a third party via a simple and eff
 <h2>💻 Reviews of Members and Their Works 💻</h2>
 
 <ul>
-    <li><p> blabla here </p><p><small>Mathieu</small></p></li>
-    <li><p> blabla here </p><p><small>Jinane</small></p></li>
-    <li><p> balbla here </p><p><small>Jérémy</small></p></li>
+    <li><q></q><p><small>Mathieu</small></p></li>
+    <li><q>Cela était interressant de travailler sur ce projet de groupe, Le projet en soit était coriace mais la partie backend m'a appris pas mal de chose.</q><p><small>Jinane</small></p></li>
+    <li><q>Entre phases de stress, fatigue et joie a propos du backend, travailler sur CE projet mais aussi avec mes collegues en "pair coding" était tres enrichissant et m'a fait entre appercevoir ce qu'est de travailler en groupe sur un projet</q><p><small>Jérémy</small></p></li>
 </ul>
 
 <br>
@@ -61,4 +75,6 @@ All seeking to bring information requested by a third party via a simple and eff
 
 <p align="center">
 <img src="https://media.giphy.com/media/dSetNZo2AJfptAk9hp/giphy.gif" title="gif TeamWork" height="50%" width="50%">
+<img src="###" title="photo de la team" height="50%" width="50%">
+
 </p>
