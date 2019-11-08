@@ -8,36 +8,44 @@
 
 <p align="center">◽️ Website connected to a Database  ◽️</p>
 <br>
-<p align="center">◽️ <a href="https://github.com/Zjinane" target="_blank">Zjinane</a> - <a href="https://github.com/Shaunyx" target="_blank">Jeremy</a> - <a href="https://github.com/MathieuKruk" target="_blank">Mathieu</a> ◽️</p>
+<p align="center">🦸 <a href="https://github.com/Zjinane" target="_blank">Zjinane 👩‍💻 </a> - <a href="https://github.com/Shaunyx" target="_blank">Jeremy 👨‍💻</a> - <a href="https://github.com/MathieuKruk" target="_blank">Mathieu 👨‍💻</a> ◽🦸</p>
+
 
 <br>
 <hr>
 <br>
 
-<h2>⬛️ Deadline ⬛️</h2>
+<figure>
+    <img src="cogip/views/assets/img/Readme/Structure_MVC_1.png" height="30%" width="15%">
+    <img src="cogip/views/assets/img/Readme/Structure_MVC_2.png" height="30%" width="15%">
+    <figcaption>structure MVC</figcaption>
+</figure>
 
-<p> project timeline </p>
+<h2>💻 Languages used 💻</h2>
+
 <ul>
-  <li>start the 28-10-19</li>
-
-  <li>To: 08-11-19</li>
+    <li>Html </li>
+    <li>Scss --> Css </li>
+    <li>PHP </li>
+    <li>Mysql syntax </li>
+    <li>Mysqli syntax </li>
 </ul>
 
 <br>
 <hr>
 <br>
 
-<h2>⬛️ The Project goals ⬛️</h2>
+
+<h2>💻 The Project goals 💻</h2>
 
 <p>Project of a dynamic website linking a database with HTML tables.
-All seeking to bring information requested by a third party via a simple and effective interface.
-This done in php with MVC method and C.R.U.D</p>
+All seeking to bring information requested by a third party via a simple and effective interface.</p>
 
 <br>
 <hr>
 <br>
 
-<h2>⬛️ Reviews of Members and Their Works ⬛️</h2>
+<h2>💻 Reviews of Members and Their Works 💻</h2>
 
 <ul>
     <li><p> blabla here </p><p><small>Mathieu</small></p></li>
@@ -50,5 +58,5 @@ This done in php with MVC method and C.R.U.D</p>
 <br>
 
 <p align="center">
-<img src="http://giphygifs.s3.amazonaws.com/media/iRzlyqHL8hJTy/giphy.gif" height="50%" width="50%">
+<img src="https://media.giphy.com/media/dSetNZo2AJfptAk9hp/giphy.gif" title="gif TeamWork" height="50%" width="50%">
 </p>
