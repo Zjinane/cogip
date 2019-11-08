@@ -74,6 +74,13 @@ form {
         height: 30px;
         margin-right: 0.5rem;
     }
+    img:hover {
+        display: flex;
+        justify-content: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5rem;
+    }
 }
 .nav-brand {
     p {
@@ -227,10 +234,7 @@ form {
 .footer {
     color:  white;
     background-color: $footerColor;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    position: -webkit-sticky;
     .social-media {
         height: 40px;
     }
@@ -248,6 +252,7 @@ form {
     } 
     i:hover {
         color: $tertiaryColor;
+        font-size: 35px;
     }
 }
 // [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
