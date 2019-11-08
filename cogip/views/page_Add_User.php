@@ -113,7 +113,7 @@ require("../controlers/controleur.php");
 						<!-- [2] ROW -->
 						<div class="row">
 							<div class="gender col-md-6 col-12">
-								<!-- 🚻 Gender -->
+								<!-- 🚻 Usertype -->
 								<p>Choose your user type:<br>
 								<span class="error"><?php echo $gender_err;?></span>
 								</div>
