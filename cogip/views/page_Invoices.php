@@ -86,16 +86,12 @@ require("../controlers/controleur.php");
 				<div class="row">
 					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
 						<table>
-							<tr>
-								<th>Invoice number</th>
-								<th>Dates</th>
-                                <th>Compagny</th>
-								<th>Type</th>
-								<th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-							</tr>
-							<?php readAllInvoice(); ?>
+					<?php
+						table_A_Invoice();
+						readAllInvoice_A();
+						table_Invoice();
+						readAllInvoice();
+						?>
 							</table>
 					</div>
 				</div>

@@ -35,7 +35,8 @@ function connectionDB(){
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 
 //afficher des factures ( lire des factures)
-function readAllInvoice(){
+function readAllInvoice_A(){
+	if($_SESSION['usertype'] == "superuser"){
 
 		$sql = "SELECT  num,date,name,type FROM invoices,contacts, companies,types ";
 
@@ -49,7 +50,29 @@ function readAllInvoice(){
 			echo "0 results";
 			
 		}
+}
 };
+
+
+function readAllInvoice(){
+	if($_SESSION['usertype'] == "user"){
+
+		$sql = "SELECT  num,date,name,type FROM invoices,contacts, companies,types ";
+
+		$result = mysqli_query(connectionDB(), $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "<tr><td>" . $row["num"]. "</td><td>" . $row["date"]."</td><td>" .$row["name"]."</td><td>" . $row["type"] . "</td><td><a href='../views/page_View_Invoice.php?id=".$row['id']."'><i class='fa fa-eye' aria-hidden='true'></i></a></td>";
+				}
+		}else{
+			echo "0 results";
+			
+}
+	}
+};
+
+
 
 /*#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#*/
 

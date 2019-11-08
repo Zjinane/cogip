@@ -86,7 +86,7 @@ require("../controlers/controleur.php");
 				<div class="row">
 					<div class="col-10 offset-1 d-flex justify-content-center table-contacts">
 						<table>
-							<caption>Clients:</caption>
+						<caption>Clients:</caption>
 						<?php
 						table_A();
 						readAllEntrepriseClient_A();
