@@ -10,6 +10,9 @@
 <br>
 <p align="center"><a href="https://github.com/Zjinane" target="_blank">Zjinane 👩‍💻 </a> - <a href="https://github.com/Shaunyx" target="_blank">Jeremy 👨‍💻</a> - <a href="https://github.com/MathieuKruk" target="_blank">Mathieu 👨‍💻</a></p>
 
+<h2>💻 Lien trello 💻</h2>
+
+<p><a href="https://trello.com/b/DEazLgzp/cogip" title="Link of project" >Click here fir the trello </a></p>
 
 
 <h2>💻 Visuel 💻</h2>
