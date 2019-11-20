@@ -1,1 +1,7 @@
-*.php
+*.sql
+contact_DB.php
+database.php
+entreprise_DB.php
+facture_DB.php
+index.php
+
