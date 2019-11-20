@@ -1,7 +1,1 @@
-cogip/models/contact_DB.php
-cogip/models/database.php
-cogip/models/entreprise_DB.php
-cogip/models/facture_DB.php
-cogip/models/mysql_DB/cogip(DB).sql
-cogip/models/mysql_DB/cogip.sql
 cogip/controlers/controleur.php
