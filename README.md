@@ -87,7 +87,4 @@ Le tout cherchant à amener des informations demandées par un tiers via une int
 <p align="center">
 <img src="https://media.giphy.com/media/dSetNZo2AJfptAk9hp/giphy.gif" title="gif TeamWork" height="50%" width="50%">
 </p>
-<p align="center" > in real </p>
-<p align="center">
-<img src="Readme/Team_tired.png" title="photo de la team" height="50%" width="50%">
-</p>
+
